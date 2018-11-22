@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .rocket-con {
+            display: none;
+            position: fixed;
+            top: 60%;
+            right: 10px;
+            width: 150px;
+            height: 250px;
+            background: red;
+            background: url(rocket.png) no-repeat;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .rocket-con:hover {
+            background-position: -149px 0
+        }
+
+        .rocket-con.step-1 {
+            background-position: -298px 0
+        }
+
+        .rocket-con.step-2 {
+            background-position: -447px 0
+        }
+
+        .rocket-con.step-3 {
+            background-position: -596px 0
+        }
+
+        .rocket-con.step-4 {
+            background-position: -745px 0
+        }
+    </style>
+</head>
+<body>
+<div style="height:50000px;"></div>
+<div class="rocket-con" id="rocket-con" title="点击回到顶部" ></div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+<script>
+    function init() {
+        var $rocket =  $("#rocket-con");
+        function throttle(method,delay){
+            var timer=null;     //相当于第一次运行，timer设为null
+            return function(){  // 之后每次window.scroll，运行的是这个函数
+                var context=this, args=arguments;
+                clearTimeout(timer);
+                timer=setTimeout(function(){
+                    console.log('timer')
+                    method.apply(context,args);
+                },delay);
+            }
+
+        }
+        // 此处throttle不能直接换为setTimeout
+        // 如是setTimeout,滚动条在最上，t=0，则$rocket.hide();定时器结束
+        // 如设置setTimeInterval，定时器无法在内部清除
+        // 如不设定时器，t<300会直接隐藏
+        window.onscroll=throttle(function () {
+            var t = $(document).scrollTop();
+            if(t > 300){
+                $rocket.show();
+            }else{
+                $rocket.hide();
+            }
+        },500);
+
+
+        $rocket.click(function () {
+            var timer = setInterval(function () {
+                var clz = $rocket[0].getAttribute( "class" );
+                switch (clz){
+                    case "rocket-con step-1":
+                        $rocket[0].setAttribute("class","rocket-con step-2");
+                        break;
+                    case "rocket-con step-2":
+                        $rocket[0].setAttribute("class","rocket-con step-3");
+                        break;
+                    case "rocket-con step-3":
+                        $rocket[0].setAttribute("class","rocket-con step-4");
+                        break;
+                    case "rocket-con step-4":
+                        $rocket[0].setAttribute("class","rocket-con step-1");
+                        break;
+                    default:
+                        $rocket[0].setAttribute("class","rocket-con step-1");
+                }
+            },50);
+
+            $("html,body").animate({scrollTop: 0},"slow");
+
+            $rocket.delay(300).animate({top: -1300},1500,function () {
+                clearInterval(timer);
+                $rocket[0].setAttribute("class","rocket-con");
+                $rocket.css("top","60%");
+            });
+
+        });
+    }
+
+    init();
+
+</script>
+</body>
+</html>
