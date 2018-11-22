@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航栏下划线跟随效果</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <style>
+        h1{
+            font-size: 30px;
+        }
+        div:after{
+            content:'';
+            display: block;
+            clear:both;
+            height: 0;
+        }
+        li{
+            position: relative;
+            list-style: none;
+            float: left;
+            padding: 20px;
+        }
+        li::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 100%;
+            border-bottom: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+<h1>width从0到100%变化，故每个元素hover，线条从左到右，离开，从右往左</h1>
+<style>
+    #item1 li::before {
+        width: 0;
+        transition: width .2s;
+    }
+    #item1 li:hover::before {
+        width: 100%;
+    }
+</style>
+<div>
+    <ul id="item1">
+        <li>阿斯蒂芬</li>
+        <li>程序是的</li>
+        <li>阿萨德吧</li>
+        <li>化上档次</li>
+        <li>规范从啊</li>
+        <li>这敌法的</li>
+    </ul>
+</div>
+<style>
+    #item2 li::before {
+        left:100%;
+        width: 0;
+        transition: all .2s;
+    }
+    #item2 li:hover::before {
+        width: 100%;
+        left:0;
+    }
+</style>
+<h1>width:0,left:100%；hover时候，变为width:100%，left:0,意味着线从右到左滑动</h1>
+<div>
+    <ul id="item2">
+        <li>阿斯蒂芬</li>
+        <li>程序是的</li>
+        <li>阿萨德吧</li>
+        <li>化上档次</li>
+        <li>规范从啊</li>
+        <li>这敌法的</li>
+    </ul>
+</div>
+<style>
+    #item3 li::before {
+        left:100%;
+        width: 0;
+        transition: all 1s;
+    }
+    #item3 li:hover::before {
+        width: 100%;
+        left:0;
+    }
+    /*选择前面有hover的：before元素*/
+    #item3 li:hover ~ li::before {
+        left: 0;
+    }
+</style>
+<h1>利用~选择器，选择hover元素前一个</h1>
+<h1 style="color: red;">瑕疵：第一个元素是从右往左</h1>
+<h2>鼠标右移动</h2>
+<p>如把鼠标放在第一个元素上，第二个元素left为0，第二个元素进入效果只有width从0到100，故是从左向右</p>
+<p>第一个元素，则是默认效果，从右向左（开始与结束都是这样）</p>
+<h2>鼠标左移动</h2>
+<p>类似的，如从第二个挪动到第一个，第二个元素left为0，效果从左到右</p>
+<div>
+    <ul id="item3">
+        <li>阿斯蒂芬</li>
+        <li>程序是的</li>
+        <li>阿萨德吧</li>
+        <li>化上档次</li>
+        <li>规范从啊</li>
+        <li>这敌法的</li>
+    </ul>
+</div>
+</body>
+</html>
