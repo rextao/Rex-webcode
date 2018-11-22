@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<!--完成Home页主要页面风格-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绘图综合</title>
+    <style>
+        .table{width: 100%;height: 300px;float:left;}
+        .tableHalf{width: 48%;height: 300px;float:left;}
+        .clear{clear:both;}
+    </style>
+</head>
+<body>
+<h1>单数据模式</h1>
+    <div id="table1" class="table"></div>
+    <div id="table2" class="tableHalf"></div>
+    <div id="table3" class="tableHalf"></div>
+    <div class="clear"></div>
+<h1>多数据模式</h1>
+    <div id="table4" class="table"></div>
+    <div id="table5" class="table"></div>
+    <div class="clear"></div>
+<h2>数据缺少模式</h2>
+    <div id="table6" class="table"></div>
+
+<script src="echarts.min.js"></script>
+<script src="basePic_v4.0.js"></script>
+<script>
+    var json1 = {
+        "flag": true, "msg": "贫困户致贫原因统计成功",
+        "result": [{"key": "因灾", "value": 72}, {"key": "因病", "value": 141}, {"key": "因残", "value": 533}, {
+            "key": "因学",
+            "value": 2
+        }, {"key": "缺技术", "value": 520}, {"key": "缺劳力", "value": 685}, {"key": "缺发展资金", "value": 290}, {
+            "key": "缺土地",
+            "value": 176
+        }, {"key": "交通条件落后", "value": 4}, {"key": "自身发展动力不足", "value": 211}, {"key": "其他", "value": 67}]
+    };
+    var t1 = json1.result;
+//    单数据模式
+    createChartArea({
+        id: "table1",
+        json: t1,
+        type: "bar",    // 可以改为line
+        title: "单数据柱状图",
+        typeName :"hah",
+        showNum :true   //　可以不显示数字
+    });
+    createChartArea({
+        id: "table2",
+        json: t1,
+        type: "pie",    // 可以改为line
+        title: "pie",
+        typeName :"hah"
+    });
+    var json2 = {
+        "flag": true,
+        "msg": "贫困状态统计成功",
+        "result": [{"key": "贫困", "value": 1741}, {"key": "非贫困", "value": 1001}]
+    };
+    var t2 = json2.result;
+    createChartArea({
+        id: "table3",
+        json: t2,
+        type: "pie",    // 可以改为line
+        title: "图分开的pie",
+        typeName :"hah",
+        selected :true
+    });
+    //多数据模式
+    var json4 = {
+        "flag": true, "msg": "扶贫项目投资总额统计成功",
+        "result": {
+            "资金总额(万元)": [{"key": "养殖业", "value": 555.00}, {"key": "教育转移培训", "value": 10000.00}],
+            "覆盖人数": [{"key": "养殖业", "value": 5000}, {"key": "教育转移培训", "value": 100}],
+            "覆盖户数": [{"key": "养殖业", "value": 5457}, {"key": "教育转移培训", "value": 111}]
+        }
+    };
+    var t4 = json4.result;
+    createChartArea({
+        id: "table4",
+        json: t4,
+        type: "bar",    // 可以改为line
+        title: "多数据柱状图",
+        typeName :"hah",
+        showNum :true   //　可以不显示数字
+    });
+    createChartArea({
+        id: "table5",
+        json: t4,
+        type: "bar",    // 可以改为line
+        title: "多数据柱状、line图",
+        typeName :"hah",
+        showNum :true ,  //　可以不显示数字
+        typeArr : ["bar","line","bar"]
+    });
+    // 数据缺少模式
+    var json5 = {"flag":true,"msg":"家庭成员贫困非贫困统计成功",
+        "result":{"生态移民":[{"key":"2016","value":2},{"key":"2018","value":5}],
+            "教育转移培训":[{"key":"2015","value":1},{"key":"2017","value":1},{"key":"2018","value":1}],
+            "教育转移培训1":[{"key":"2015","value":1},{"key":"2017","value":1},{"key":"2019","value":1}],
+            "种植业":[{"key":"2016","value":1}]}};
+    var t5 = json5.result;
+    createChartArea({
+        id: "table6",
+        json: t5,
+        type: "bar",
+        title: "数据缺少模式",
+        typeName :"hah",
+        lacked :true,
+        showNum: true
+    });
+</script>
+</body>
+</html>
