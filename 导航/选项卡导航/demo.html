@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="renderer" content="webkit">
+
+    <title>simple</title>
+ 
+    <link href="css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+
+	<link href="css/style.min.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>基于BootStrap，点击菜单，出现选项卡，选项卡可以关闭，
+        1.jpg为效果图</h1>
+	<div class="row content-tabs">
+        <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"></i>
+        </button>
+        <nav class="page-tabs J_menuTabs">
+            <div style="margin-left: 0px;" class="page-tabs-content">
+                <a href="javascript:;" class="J_menuTab active" data-id="index_v1.html">首页</a>
+            </div>
+        </nav>
+        <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i>
+        </button>
+	    <div class="btn-group roll-nav roll-right">
+            <button class="dropdown J_tabClose " data-toggle="dropdown">关闭操作<span class="caret"></span>
+            </button>
+            <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                <li class="J_tabShowActive"><a>定位当前选项卡</a>
+                </li>
+                <li class="divider"></li>
+                <li class="J_tabCloseAll"><a>关闭全部选项卡</a>
+                </li>
+                <li class="J_tabCloseOther"><a>关闭其他选项卡</a>
+                </li>                
+            </ul>            
+         </div>  
+               
+    </div>
+    <div>
+    	  <ul class="nav nav-second-level">
+                <li ><a class="J_menuItem" href="syrk_syrk.html" >实有人口</a>
+                </li>
+                <li ><a class="J_menuItem" href="syrk_hjrk.html" >户籍人口</a>
+                </li>
+                <li ><a class="J_menuItem" href="7.html" >流动人口</a>
+                </li>
+                <li class="J_menuItem"  href="1.html" ><a href="#">境外人口1</a>
+                </li>     
+                <li class="J_menuItem"  href="2.html" data-index="5"><a href="#">境外人口2</a>
+                </li> 
+                <li class="J_menuItem"  href="3.html" ><a href="#">境外人口3</a>
+                </li> 
+                <li class="J_menuItem"  href="4.html" ><a href="#">境外人口4</a>
+                </li> 
+                <li class="J_menuItem"  href="5.html" ><a href="#">境外人口5</a>
+                </li> 
+                <li class="J_menuItem"  href="6.html" ><a href="#">境外人口6</a>
+                </li>                       
+            </ul>
+    </div>    
+    <div class="row J_mainContent" id="content-main">
+    	<iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="" frameborder="0" data-id="index_v1.html" seamless></iframe>
+    </div> 
+
+    
+   <!-- Mainly scripts -->
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js?v=3.4.0"></script>
+	
+	<script type="text/javascript" src="js/contabs.min.js"></script>
+</body>
+</html>
