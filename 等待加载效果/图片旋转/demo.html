@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .main-loading {position:fixed;left:0;top:0;right:0;bottom:0;width:100%;height:100%;background:#ccc;z-index:99;}
+        .main-loading .loading-con {position:absolute;left:50%;top:50%;margin-left:-40px;margin-top:-40px;width:96px;height:96px;}
+        .main-loading .loading-circle {width:80px;height:80px;border-top:8px solid #11994b;border-right:8px solid #f2a808;border-bottom:8px solid #2399e7;border-left:8px solid #c0392b;-webkit-border-radius:50%;border-radius:50%;-webkit-animation:spin 1s infinite linear;-moz-animation:spin 1s infinite linear;animation:spin 1s infinite linear;}
+        .main-loading .loading-con img {position:absolute;top:8px;left:8px;width:80px;height:80px;-webkit-border-radius:50%;border-radius:50%;}
+        @keyframes spin {
+            0% {-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);transform:rotate(0deg)}
+            100% {-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);transform:rotate(360deg)}
+        }
+        @-moz-keyframes spin {
+            0% {-moz-transform:rotate(0deg)}
+            100% {-moz-transform:rotate(360deg)}
+        }
+        @-webkit-keyframes spin {
+            0% {-webkit-transform:rotate(0deg)}
+            100% {-webkit-transform:rotate(360deg)}
+        }
+
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        $(function () {
+            $("#main-loading").delay(500).fadeOut("normal", function() {
+                $(this).css("display","none");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="main-loading" id="main-loading" style="/* display: none; */">
+        <div class="loading-con">
+            <div class="loading-circle"></div>
+            <img src="head_4fa80ea.jpg" title="jquery api" alt="jquery api">
+        </div>
+    </div>
+    <h1>haaaaaaaaaa</h1>
+    <p>1. jquery api 主页的等待效果</p>
+    <p>2. 并不是根据页面内容等待加载完毕后显示结果，而是利用$.delay函数，过一段时间后，显示主页</p>
+</body>
+</html>
