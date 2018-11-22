@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+	<style>
+		/*分享按钮定位*/
+		.alert-box {z-index:2;margin-top:100px;position:absolute;width:200px;height:50px;line-height:60px;background:#FFF;box-shadow:1px 1px 5px #d1d1d1;border:1px solid #d1d1d1}
+		.alert-box .arrow {position:absolute;left:45px;overflow:hidden;width:0;height:0;border-width:10px;border-style:solid dashed dashed dashed;}
+		.alert-box .bd {top:-20px;border-color:transparent transparent #DDD transparent;}
+		.alert-box .bg {top:-19px;border-color:transparent transparent #FFF transparent;}
+		.alert-box.share {padding:10px 15px;width:119px;height:67px;}
+		#shareBox {line-height:0 !important;}
+		#shareBox a {padding-bottom:0;padding-right:0;margin-bottom:6px;padding-left:25px;height:8px;}
+		.show {display:block;}
+		.hide {display:none;}
+	</style>
+</head>
+<body>
+<div class="game-btns">
+	<a href="javascript:void(0)" class="confirm-btn">我只是摆设</a>
+	<a href="javascript:void(0)" class="confirm-btn">邀请好友</a>
+	<div class="alert-box share hide" >
+		<div class="bshare-custom " id="shareBox" >
+			<a title="分享到微信" class="bshare-weixin" href="javascript:void(0);">分享到微信</a>
+			<a title="分享到新浪微博" class="bshare-sinaminiblog" href="javascript:void(0);">分享到新浪微博</a>
+			<a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);">分享到QQ好友</a>
+		</div>
+		<div class="arrow bd"></div>
+		<div class="arrow bg"></div>
+	</div>
+</div>
+	<!--<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>-->
+	<!--<script type="text/javascript">-->
+		<!--function share()-->
+		<!--{-->
+		    <!--$('.alert-box.share').toggleClass('show').toggleClass('hide');-->
+		<!--}-->
+	<!--</script>-->
+	<script>
+		var a  = document.getElementsByClassName('confirm-btn')[1];
+		a.onclick = function () {
+			var domNum = document.getElementsByClassName("alert-box share")[0];
+			if(domNum.classList[2] == 'hide'){
+				domNum.className = 'alert-box share show';
+			}else {
+				domNum.className = 'alert-box share hide';
+			}
+		}
+	</script>
+	<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+	<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+</body>
+</html>
