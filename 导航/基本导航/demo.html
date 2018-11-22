@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本导航</title>
+    <style>
+        /*通用样式*/
+        body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,table,td,img,div,dl,dt,dd,em,strong{margin: 0;padding: 0;border: 0;}
+        img {border: none;}
+        ul{list-style:none;}
+        a {text-decoration: none;color: #4996ed; cursor: pointer;}
+        a:link {color: #4996ed;text-decoration: none;}
+        a:visited {color: #4996ed;text-decoration: none;}
+        a:hover {color: #4996ed;text-decoration: none;}
+        a:active {color: #4996ed;text-decoration: none;}
+        /*浮动*/
+        .fl{float:left;}
+        .fr{float:right;}
+
+        .header1{height:75px;position:absolute;z-index:99;width:100%;left:0;top:0}
+        .header-inner{width:1080px;margin:0 auto;overflow: hidden;}
+        .logo{display:block;width:157px;height:56px;margin:10px 0 0 10px;background:url('../images/logo.png') no-repeat;}
+
+
+        .menu{margin:33px 0 0 197px;line-height:20px;list-style:none;overflow: hidden;}
+        .menu li{float:left;padding: 0 0 18px 0;}
+        .menu li.on{border-bottom:4px solid #14aadb;}
+        .menu li a{display:block;padding:0 15px;border-right:1px solid #3e515d;color:#fff;}
+
+        .users{margin:35px 10px 0 0;}
+        .users a{font-size:12px;color:#fff;padding:5px 10px;border:1px solid #1b5373;margin-right:10px;}
+
+
+    </style>
+</head>
+<body style="background-color: black">
+    <p>早期大数据网站设计风格</p>
+    <div class="header1">
+        <div class="header-inner">
+            <a href="javascript:void(0)" title="工业大数据" class="logo fl"></a>
+            <div class="users fr ">
+                <a href="javascript:void(0)" title="登录" >登录</a>
+                <a href="javascript:void(0)" title="注册">注册</a>
+            </div>
+            <ul class="menu">
+                <li><a href="javascript:void(0)" title="首页">首页</a></li>
+                <li class="on"><a href="javascript:void(0)" title="数据竞赛">数据竞赛</a></li>
+                <li><a href="javascript:void(0)" title="新闻中心">新闻中心</a></li>
+                <li><a href="javascript:void(0)" title="参赛团队">参赛团队</a></li>
+                <li><a href="javascript:void(0)" title="荣誉榜">荣誉榜</a></li>
+                <li><a href="javascript:void(0)" title="技术论坛">技术论坛</a></li>
+                <li><a href="javascript:void(0)" title="大赛评委">大赛评委</a></li>
+                <li><a href="javascript:void(0)" style="border:0" title="关于我们">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div style="background:url(slider1.png) #04121d center 0 no-repeat;height: 400px;"></div>
+</body>
+</html>
