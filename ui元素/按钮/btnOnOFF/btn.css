@@ -1,0 +1,86 @@
+//开关按钮效果，只是用css，没有使用js实现效果
+.btnOnOff .setings-item .switch {
+    float: right;
+}
+.btnOnOff .setings-item {
+    padding: 15px 25px;
+}
+.btnOnOff .setings-item  .itemTitle{    line-height: 18px;}
+.btnOnOff .onoffswitch {
+    position: relative;
+    width: 54px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.btnOnOff .onoffswitch-checkbox {
+    display: none
+}
+
+.btnOnOff .onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #1AB394;
+    border-radius: 3px
+}
+
+.btnOnOff .onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    -webkit-transition: margin .3s ease-in 0s;
+    transition: margin .3s ease-in 0s
+}
+
+.btnOnOff .onoffswitch-inner:after,.onoffswitch-inner:before {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 16px;
+    padding: 0;
+    line-height: 16px;
+    font-size: 10px;
+    font-family: Trebuchet,Arial,sans-serif;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+.btnOnOff .onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 7px;
+    background-color: #1AB394;
+    color: #FFF
+}
+
+.btnOnOff .onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 7px;
+    background-color: #FFF;
+    color: #919191;
+    text-align: right;
+}
+
+.btnOnOff .onoffswitch-switch {
+    display: block;
+    width: 18px;
+    margin: 0;
+    background: #FFF;
+    border: 2px solid #1AB394;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 36px;
+    -webkit-transition: all .3s ease-in 0s;
+    transition: all .3s ease-in 0s;
+}
+
+.btnOnOff .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+    margin-left: 0
+}
+
+.btnOnOff .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+    right: 0
+}
