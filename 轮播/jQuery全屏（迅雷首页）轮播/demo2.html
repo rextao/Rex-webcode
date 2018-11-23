@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my</title>
+    <style>
+        *{padding:0;margin:0;}
+        ul li {list-style: none;}
+
+        .wrap {height:100%;position:relative;overflow:hidden;}
+        .pages {position:relative;height:100%;}
+        .bgbox {position:absolute;width:100%;height:100%;top:0;left:-999999px}
+        .bgimg {}
+        img {position:absolute;top:50%;left:50%;}
+        .show {left:0;}
+
+        .btns-group {position: absolute; width:100%;bottom: 20px;height: 56px;}
+        .btns {position:absolute;width:300px;left:50%;margin-left:-188px;height: 56px;border-bottom: 3px solid #92a0b4;border-color: rgba(255,255,255,0.2);}
+        .btns a{background: url(img/ic_s/ic_spr.png) no-repeat;position:absolute;display: block;height: 54px;width: 45px;}
+        .btns a:hover,.btns a.cur{background: url(img/ic_s/ic_spr.png) no-repeat;border-bottom: 3px solid #fff;}
+
+        .btns a.a{left:0;background-position:  0  0;}
+        .btns a.a:hover,.btns .a.cur{background-position:  0  -69px;}
+        .btns a.b{left:65px;background-position:  -64px  0;}
+        .btns a.b:hover,.btns .b.cur{background-position: -64px  -69px;}
+        .btns a.c{left:138px;background-position:  -138px  0;}
+        .btns a.c:hover,.btns .c.cur{background-position:  -138px  -69px;}
+        .btns a.d{left:200px;background-position:  -201px  0;}
+        .btns a.d:hover,.btns .d.cur{background-position: -201px  -69px;}
+        .btns a.e{left:259px;background-position:  -259px  0;}
+        .btns a.e:hover,.btns .e.cur{background-position:-259px  -69px;}
+        .btns a.f{left:327px;background-position: -329px  0;}
+        .btns a.f:hover,.btns .f.cur{background-position:-329px -69px;}
+
+
+        .content{color:#fff;position: absolute;top: 50%;left: 50%;text-align: center;border-width: 1px;border-style: solid;}
+        .show .content{animation:bounceInDown .6s .3s linear both;-webkit-animation:bounceInDown .6s .3s linear both;}
+        @keyframes tt_effect{
+            0%{transform:translateY(-20px);opacity:0;}
+            100%{transform:translateY(0);opacity:1;}
+        }
+        @-webkit-keyframes tt_effect{
+            0%{-webkit-transform:translateY(-20px);opacity:0;}
+            100%{-webkit-transform:translateY(0);opacity:1;}
+        }
+        @keyframes bounceInDown{
+            0%{opacity:0;transform:translateY(-2000px);}
+            60%{opacity:1;transform:translateY(30px);}
+            80%{transform:translateY(-10px);}
+            100%{transform:translateY(0);}
+        }
+        @-webkit-keyframes bounceInDown{
+            0%{opacity:0;-webkit-transform:translateY(-2000px);}
+            60%{opacity:1;-webkit-transform:translateY(30px);}
+            80%{-webkit-transform:translateY(-10px);}
+            100%{-webkit-transform:translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap" id="wrap">
+        <div class="pages">
+            <div class="bgbox show">
+                <div class="bgimg ">
+                    <img src="img/bg_member.jpg" >
+                </div>
+                <div class="content">啊啊啊啊啊啊啊啊啊啊啊啊</div>
+            </div>
+            <div class="bgbox">
+                <div class="bgimg ">
+                    <img src="img/bg_shoulei.jpg">
+                </div>
+                <div class="content"></div>
+            </div>
+            <div class="bgbox">
+                <div class="bgimg ">
+                    <img src="img/bg_xav.jpg">
+                </div>
+                <div class="content"></div>
+            </div>
+            <div class="bgbox">
+                <div class="bgimg ">
+                    <img src="img/bg_xnet.jpg">
+                </div>
+                <div class="content"></div>
+            </div>
+            <div class="bgbox">
+                <div class="bgimg ">
+                    <img src="img/bg_xkn.jpg">
+                </div>
+                <div class="content"></div>
+            </div>
+        </div>
+        <div class="btns-group">
+            <div class="btns">
+                <a href="#" class="a cur"></a>
+                <a href="#" class="b"></a>
+                <a href="#" class="c"></a>
+                <a href="#" class="d"></a>
+                <a href="#" class="e"></a>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+        (function () {
+            var $pages = $(".pages").find(".bgbox"),
+                    $wrap = $("#wrap"),
+                    $btns = $(".btns").find("a"),
+                    $bgs = $pages.find(".bgimg img");
+            var timer;
+
+            var data = {
+                pLength : $pages.length,
+                isBtnOn : false,
+                curP : 0, // 当前页
+                dur: 1000   //每次切换时间
+            };
+            //定时切换页面
+            var changePage = function (idx) {
+                if(data.isBtnOn){
+                    return;
+                }
+                $pages.removeClass("show").eq(idx).addClass("show");
+                $btns.removeClass("cur").eq(idx).addClass("cur");
+                data.curP = ++idx;
+            };
+            timer = setInterval(function () {
+                changePage((data.curP)%data.pLength);
+            },data.dur);
+            //鼠标移入btns事件
+            $btns.on("mouseenter",function () {
+                changePage($(this).index());
+                data.isBtnOn = true;
+            });
+            $btns.on("mouseout",function () {
+                data.isBtnOn = false;
+            });
+            //图片自适应
+            var resize = function () {
+                var w=$(window).width(),
+                        h=$(window).height();
+                $wrap.height(h);
+                if(w/h<1920/1080){//对图片进行平移
+                    $bgs.height(h).css({width:"auto",margin:-.5*h+"px 0 0 "+-.5*1920/1080*h+"px"});
+                }else{
+                    $bgs.width(w).css({height:"auto",margin:-.5*w*1080/1920+"px 0 0 "+-.5*w+"px"});
+                }
+            };
+            $(window).resize(resize);
+            resize();
+        })()
+    </script>
+</body>
+</html>
