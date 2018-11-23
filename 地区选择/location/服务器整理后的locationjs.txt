@@ -1,0 +1,99 @@
+(function(w){
+	if(!!w.arealocation) return;
+
+	var arealocation = {
+			areaTitle : [],	//当前地区name
+			areaId : [],	//当前地区id
+			arrIndex : 1,  //json数组访问下标,当前level的下一级
+			init : function(code){
+				if(!code){
+					if(!!console) console.info("当前辖区code不存在");
+					return;
+				}
+				arealocation.getAreaList(arealocation.getSubList(code));
+				arealocation.areaTitle.push((arealocation.getList)(code)[0].areaName);//将点击字符串传入areaTitle
+				arealocation.areaId.push(code);
+				$("#area").on("click","a",function(){
+					$("#area").empty();	//清空area
+					arealocation.areaTitle.push($(this).text());//将点击字符串传入areaTitle
+					arealocation.areaId.push($(this).attr("data-value"));
+					arealocation.getAreaList(arealocation.getSubList($(this).attr("data-value")));// 通过  $(this).attr("data-value")获取字符串
+					arealocation.arrIndex++;
+					arealocation.setTableTitle();
+				});
+				$("#select").on("click","a",function(){		//点击标题栏某个	id=select
+					var level = parseInt($(this).attr("data-level"));		//当前点击的级别
+					arealocation.areaTitle = arealocation.areaTitle.splice(0,level+1);
+					arealocation.areaId    = arealocation.areaId.splice(0,level+1);
+					$(this).nextAll().remove();
+					$("#area").empty();	//清空area
+					arealocation.getAreaList(arealocation.getSubList($(this).attr("data-value")));// 通过  $(this).attr("data-value")获取字符串
+					arealocation.arrIndex = level+2;
+				});
+				// 点击确定按钮
+				$("#localselect .btn-group button").click(function(){
+					arealocation.closeArea();
+					arealocation.setTitle();
+				});
+				// 点击当前辖区后，弹出面板
+				$("#curareatitle").click(function(){
+					$('#localselect').addClass('hover');
+				});
+			},
+			// 关闭面板方法
+			closeArea : function(){
+				$('#localselect').removeClass('hover');
+			},
+			// 循环生成面板li
+			getAreaList : function(json){
+				var area = $("#area");
+				if (!!json.length) {
+					for (var i=0; i < json.length; i++) {
+				 	 area.append("<li class='longer-area'><a href='#none' data-value='"+json[i].areaCode+"' >"+json[i].areaName+"</a></li>");
+					};
+				}else{//如当前json无下级，则不再添加
+					arealocation.closeArea();
+					arealocation.setTitle();
+				};
+			},
+			// 设置面板上的标题题目
+			setTableTitle : function(){
+				var title = $("#select");
+				title.empty();
+				for (var i=0; i < arealocation.areaId.length-1; i++) {
+				  title.append("<a href='#none' data-value='"+arealocation.areaId[i]+"' data-level='"+i+"'>"+arealocation.areaTitle[i]+"</a><i class='fa fa-angle-right'></i>");
+				};
+				//题目最后一个，不再增加箭头
+				title.append("<a href='#none' data-value='"+arealocation.areaId[i]+"' data-level='"+i+"'>"+arealocation.areaTitle[i]+"</a>");
+			},
+			// 设置当前辖区后——标题
+			setTitle : function(){
+				$("#curareatitle i").html(arealocation.areaTitle[arealocation.areaTitle.length-1]);
+				$("#curareatitle i").attr("current-data-value",arealocation.areaId[arealocation.areaId.length-1]);
+			},
+			getList : function(code){
+				$.ajax({
+					url: path+"/sm/customizeAreaManager!getAreaXqWgByCode.action?customizeAreaObj.areaCode="+code,
+					type: "get",
+					async: false,
+					success: function(data){
+						_data = data;
+					}
+				});
+				return _data;
+			},
+			getSubList : function(code){
+				$.ajax({
+					url: path+"/sm/customizeAreaManager!getAreaXqWgByCode.action?customizeAreaObj.parentCode="+code,
+				    type: "get",
+				    async: false,
+					success: function(data){
+					   _data = data;
+				   }
+				});
+				return _data;
+			}
+	};
+
+	w.arealocation = arealocation;
+})(window);
