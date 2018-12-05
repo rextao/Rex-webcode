@@ -1,0 +1,9 @@
+#localselect.hover{display: block}
+/*#localselect{position:absolute;top:23px;z-index:1;width: 400px;background-color: #FFFFFF;display: none;padding: 5px 5px 5px 5px;border: 1px solid #676a6c}*/
+#select i{margin-left: 6px;margin-right: 6px}
+#title i{cursor: pointer;font-style: normal}
+
+#area a{font-size: 16px;font-weight: normal;color:#676a6c}
+#select a{font-size: 16px;font-weight: normal;color:#676a6c}
+#localselect{position:absolute;top:25px;z-index:1;width:400px;width:400px;padding:6px;border:1px solid #ddd;background:#fff;display:none;-moz-box-shadow:0 0 5px #ddd;-webkit-box-shadow:0 0 5px #ddd;box-shadow:0 0 5px #ddd}
+#localselect h3{padding-left: 20px;padding-top: 10px}

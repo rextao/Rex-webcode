@@ -1,0 +1,26 @@
+
+一、学习
+1、了解动画引擎Tweenlite和cssPlugin实现动画效果
+（1）Tweenlite是非常快的，轻量级的，灵活的动画制作工具，是基于GreenSock动画的基础平台（GSAP）的。
+一个Tweenlite实例可以同时处理任何对象的一个或多个属性；
+Tweenlite可独自使用完成动画的核心功能，也可配合时序工具（TimelineLite or TimelineMax）更容易的实现
+复杂的动画；
+（2）TweenLite.to()
+TweenLite.to( target:Object, duration:Number, vars:Object ) : TweenLite
+[静态方法]创建一个Tweenlite实例，让其从现在值变化到指定的目标值；
+（3）CSSPlugin
+利用CSSPlugin插件，GSAP可以使DOM元素的任何css相关属性实现动画效果
+
+2、jquery.mousewheel等横屏滚动
+(1)对于横屏滚动，要注意，垂直不要有滚动条
+(2)主要是：添加跨浏览器的鼠标滚轮支持
+3、学习hashchange事件
+（1）通过hashchange事件，进行菜单点击后，切换不同页面
+4、利用对象关系模式而非对象继承模式（也不知准确否），实现了功能（未使用prototype）
+问题：
+1、最最关心的问题，使用prototype和对象模式有什么异同？？？？？？？？？？？？？？
+
+
+
+
+

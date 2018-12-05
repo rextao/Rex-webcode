@@ -1,0 +1,1 @@
+this.ws=this.ws||{},function(){var t=function(t){this.init(t)},i=t.prototype;i.timer=null,i.init=function(t){this.$thumb=$(".newsPanel .thumb"),this.$delayImage=$(".newsPanel .delayImage"),this.$delayImage.imageLoad()},ws.News=t}();

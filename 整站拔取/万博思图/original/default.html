@@ -1,0 +1,1144 @@
+﻿<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head><title>HTML5/Flash设计开发|交互设计|网站建设|数据可视化|万博思图(北京)</title>
+    <meta name="description"
+          content="北京万博思图主营业务:HTML5/Flash网站建设、HTML5/Flash设计开发、北京网站建设、数据可视化开发、Flash应用程序开发、游戏开发、手机游戏开发，我们的目标是做中国最专业的Flash网站建设团队,电话：01059070059">
+    <meta name="keywords"
+          content="HTML5网站建设,HTML5游戏开发,网站建设,数据可视化开发,北京网站建设,北京网站建设公司，Flash网站建设,Flash设计开发,Flash design,Flash develop,Flash lite,Flash game,Actionscript Training ,Actionscript book">
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=680">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/nav.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/guide.css" type="text/css">
+    <link rel="stylesheet" href="css/home.css" type="text/css">
+    <link rel="stylesheet" href="css/about.css" type="text/css">
+    <link rel="stylesheet" href="css/service.css" type="text/css">
+    <link rel="stylesheet" href="css/news.css" type="text/css">
+    <link rel="stylesheet" href="css/job.css" type="text/css">
+    <link rel="stylesheet" href="css/contact.css" type="text/css">
+    <script src="js/tool.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.history.js"></script>
+    <script src="js/jquery.imagepreloader.js"></script>
+    <script src="js/tweenlite.min.js"></script>
+    <script src="js/cssplugin.min.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/news.js"></script>
+    <script src="js/job.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/frame.js"></script>
+    <script src="js/guideshift.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wb.js" type="text/javascript" charset="utf-8"></script>
+    <script>$(document).ready(function () {
+        new ws.Main
+    })</script>
+</head>
+<body>
+<div id="navContainer">
+    <div class="bg"></div>
+    <div class="logoIcon"></div>
+    <div class="content">
+        <div class="logo"><img src="picture/logo.png"></div>
+        <a class="nav navOut1 home btn_tween" href="#_home">首页</a>
+        <a class="nav navOut1 about btn_tween" href="#_about">关于我们</a>
+        <a class="nav navOut1 service btn_tween" href="#_service">服务客户</a>
+        <a class="nav navOut1 news btn_tween" href="#_news">新闻动态</a>
+        <a class="nav navOut1 recruit btn_tween" href="#_job">招贤纳士</a>
+        <a class="nav navOut1 contact btn_tween" href="#_contact">联系我们</a>
+        <a class="nav navOut2 cases btn_tween" href="case.php">案例作品</a>
+        <a class="nav navOut2 topic btn_tween" href="topic.php">数据可视化</a>
+        <a class="nav navOut2 platform btn_tween" href="platform.php">个性化管理平台</a>
+    </div>
+    <div class="phone"><strong>联系电话</strong><br>010-59070059<br>010-85990057</div>
+    <div class="sns">
+        <div class="share sub t">
+            <div class="shareTitle btn_tween"></div>
+            <div class="sharePanel">
+                <div class="shareItem s1 btn_tween"></div>
+                <div class="shareItem s2 btn_tween"></div>
+                <div class="shareItem s3 btn_tween"></div>
+                <div class="shareItem s4 btn_tween"></div>
+            </div>
+        </div>
+        <a class="qq sub t" href="tencent://message/?Menu=yes&amp;uin=88469911">
+            <div class="qqTitle btn_tween"></div>
+            <div class="qqPanel">有事您Q我</div>
+        </a>
+
+        <div class="sina sub t">
+            <div class="sinaTitle btn_tween"></div>
+            <div class="sinaPanel t">
+                <wb:follow-button uid="2128576901" type="red_2" width="136" height="24"></wb:follow-button>
+            </div>
+        </div>
+        <div class="weixin sub t">
+            <div class="weixinTitle btn_tween"></div>
+        </div>
+        <div class="qrcodePanel t"><img src="picture/qrcode.png"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="guideContainer" class="part">
+        <ul id="guideControllers">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul id="guideActor">
+            <li class="guide">
+                <div class="guideBg"></div>
+                <div class="image"></div>
+                <div class="txt"><img src="picture/guide_txt.png"></div>
+            </li>
+            <li class="data">
+                <div class="shining0_1"><img src="picture/perorange.png"></div>
+                <div class="shining0_2"><img src="picture/perorange.png"></div>
+                <div class="shining0_3"><img src="picture/perorange.png"></div>
+                <div class="shining0_4"><img src="picture/perorange.png"></div>
+                <div class="shining0_5"><img src="picture/perorange.png"></div>
+                <div class="shining1_1"><img src="picture/perorange.png"></div>
+                <div class="shining1_2"><img src="picture/perorange.png"></div>
+                <div class="shining1_3"><img src="picture/perorange.png"></div>
+                <div class="shining1_4"><img src="picture/perorange.png"></div>
+                <div class="shining1_5"><img src="picture/perorange.png"></div>
+                <div class="shining1_6"><img src="picture/perorange.png"></div>
+                <div class="shining1_7"><img src="picture/perorange.png"></div>
+                <div class="shining2_1"><img src="picture/perorange.png"></div>
+                <div class="shining2_2"><img src="picture/perorange.png"></div>
+                <div class="shining2_3"><img src="picture/perorange.png"></div>
+                <div class="shining2_4"><img src="picture/perorange.png"></div>
+                <div class="shining2_5"><img src="picture/perorange.png"></div>
+                <div class="shining2_6"><img src="picture/perorange.png"></div>
+                <div class="shining2_10"><img src="picture/pergreen.png"></div>
+                <div class="shining2_11"><img src="picture/pergreen.png"></div>
+                <div class="shining2_12"><img src="picture/pergreen.png"></div>
+                <div class="shining2_13"><img src="picture/pergreen.png"></div>
+                <div class="shining2_14"><img src="picture/pergreen.png"></div>
+                <div class="shining2_15"><img src="picture/pergreen.png"></div>
+                <div class="shining2_16"><img src="picture/pergreen.png"></div>
+                <div class="shining2_17"><img src="picture/pergreen.png"></div>
+                <div class="shining2_18"><img src="picture/pergreen.png"></div>
+                <div class="shining3_1"><img src="picture/pergreen.png"></div>
+                <div class="shining3_2"><img src="picture/pergreen.png"></div>
+                <h3 class="font_46px">数据可视化</h3><a class="font_16px" href="http://www.cn-wbst.com/topic.php">点击查阅</a>
+
+                <p class="font_16px">我们专注于让数据灵活、生动的展示，便于用户认识数据、了解数据。</p></li>
+            <li class="stage">
+                <div class="stage_1"><h3 class="font_46px"><span>个性化管理平台</span><a class="font_16px"
+                                                                                  href="http://www.cn-wbst.com/platform.php">点击查阅</a>
+                </h3>
+
+                    <p class="font_16px">为繁琐的业务流程设计便捷的表现形式，降低用户操作的复杂度，提升系统易用性，提高用户的日常工作效率。</p></div>
+                <div class="stage_2"><h3 class="font_46px"><span>数据分析平台</span><a class="font_16px"
+                                                                                 href="http://www.cn-wbst.com/platform.php">点击查阅</a>
+                </h3>
+
+                    <p class="font_16px">基于企业的日常商业数据，使用便捷的多维数据分析模型或其他统计分析模型，为运营、决策提供全方面指导，提升企业的盈利、产值 。</p></div>
+                <div class="stageImage_2"><img src="picture/stage.png"></div>
+                <div class="stageImage_1"><img src="picture/data.png"></div>
+            </li>
+            <li id="wechatContain">
+                <div class="text text_1"><h3><span>HTML5</span>微信游戏</h3></div>
+                <div class="text text_2"><h3>精彩创意精湛技术</h3></div>
+                <div id="wechatBox">
+                    <div id="bullet01"></div>
+                    <div id="bullet02"></div>
+                    <div id="staticBullet01"></div>
+                    <div id="staticBullet02"></div>
+                    <div id="tank01">
+                        <div class="tank">
+                            <div class="tankLeft tankBullet"></div>
+                            <div class="tankLeft tankBullet"></div>
+                            <div class="tankRight tankBullet"></div>
+                            <div class="tankRight tankBullet"></div>
+                        </div>
+                    </div>
+                    <div id="tank02">
+                        <div class="tank">
+                            <div class="tankLeft tankBullet"></div>
+                            <div class="tankLeft tankBullet"></div>
+                            <div class="tankRight tankBullet"></div>
+                            <div class="tankRight tankBullet"></div>
+                        </div>
+                    </div>
+                    <div id="tank03">
+                        <div class="tank">
+                            <div class="tankLeft tankBullet"></div>
+                            <div class="tankLeft tankBullet"></div>
+                            <div class="tankRight tankBullet"></div>
+                            <div class="tankRight tankBullet"></div>
+                        </div>
+                    </div>
+                    <div class="eating" id="eating01">
+                        <div class="eating" id="eating02">
+                            <div class="eating" id="eating03">
+                                <div class="eating" id="eating04">
+                                    <div class="eating" id="eating05">
+                                        <div class="eating" id="eating06">
+                                            <div class="eating" id="eating07">
+                                                <div class="eating" id="eating08">
+                                                    <div class="eating" id="eating09">
+                                                        <div class="eating" id="eating10">
+                                                            <div id="bug"><img src="picture/eatingover.png"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ghost"></div>
+                    <div id="mario"></div>
+                </div>
+            </li>
+            <li class="net">
+                <div class="net_contain">
+                    <div class="Phone">
+                        <div class="PhoneScreen">
+                            <div id="PhoneImage"></div>
+                        </div>
+                    </div>
+                    <div class="pad">
+                        <div class="padScreen">
+                            <div id="padImage"></div>
+                        </div>
+                    </div>
+                    <div class="pc">
+                        <div class="pcScreen">
+                            <div id="pcImage"></div>
+                        </div>
+                    </div>
+                    <div class="txtScreen">
+                        <ul id="netTxt">
+                            <li><h4><span class="font_46px">定制高端HTML5</span><a class="font_16px"
+                                                                               href="case.php#30">点击查看</a></h4>
+
+                                <p class="font_16px">品牌网站，专注企业本身。</p></li>
+                            <li><h4><span class="font_46px">定制电商网站</span><a class="font_16px"
+                                                                            href="case.php#36">点击查看</a></h4>
+
+                                <p class="font_16px">专注易用性，提高交易率。</p></li>
+                            <li><h4><span class="font_46px">定制高端HTML5</span><a class="font_16px"
+                                                                               href="case.php#30">点击查看</a></h4>
+
+                                <p class="font_16px">品牌网站，专注企业本身。</p></li>
+                        </ul>
+                    </div>
+                    <div class="netControllerBox">
+                        <div id="netControllerBg"></div>
+                        <ul id="netController">
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div id="arrow"></div>
+    </div>
+    <div id="homeContainer" class="part">
+        <div class="content">
+            <div class="partTitle" style="margin-left: 40px"><span class="en">NEW CASE</span><span
+                    class="cn black">最新案例</span></div>
+            <div id="home">
+                <div class="imgMask">
+                    <div class="scrollContainer"><a class="focusImg" href="" target="_blank">
+                        <img class="delayImage" width="786px" height="492px" final-src="picture/fouce.jpg"
+                             src="images/empty.png"/>
+                    </a> <a class="focusImg" href="http://www.taikang.com/" target="_blank">
+                        <img class="delayImage" width="786px" height="492px" final-src="picture/foucstk.jpg"
+                             src="images/empty.png"/>
+                    </a> <a class="focusImg" href="http://tunland.foton.com.cn/pickup/" target="_blank">
+                        <img class="delayImage" width="786px" height="492px" final-src="picture/1__.png"
+                             src="images/empty.png"/>
+                    </a></div>
+                </div>
+                <div class="detailGroup">
+                    <div class="detail">
+                        <div class="focusTitle">宁夏网络安全信息管理平台</div>
+                        <div class="enTitle enFont">NINGXIA NETWORK SECURITY</div>
+                        <div class="intro contentFont">宁夏网络安全信息管理平台数据可视化界
+                            万博思图负责整个平台的创意设计及前端开发，后端接入客户接口数据。设计上整个界面以蓝色系为主，结合科技感流行元素。技术采用html5，深入挖掘数据，定制高可用可视化组件，丰富的人机交互体验，使数据展示的更直观更有魅力，在确保数据的易读，直观的前题下，同时保证了整体视觉的协调统一。……
+                        </div>
+                        <a class="linkBtn btn_tween" href="case.php?#98">查看详情</a>
+                        <!--<a class="link btn_tween" href="" target="_blank">LINK</a>-->
+                    </div>
+                    <div class="detail">
+                        <div class="focusTitle">泰康保险集团官网</div>
+                        <div class="enTitle enFont">taikang</div>
+                        <div class="intro contentFont">
+                            恰逢泰康保险集团成立以及泰康保险成立20周年庆双喜，万博思图荣幸中标泰康保险集团官网建设项目，为其定制集团官方网站。官网定位为品牌宣传，重点突出集团实力。采用极简风格、不规则布局，象征泰康不断创新的精神。
+                            采用主流响应式技术实现，支持手机，pad, pc浏览，保持开放性，适应多平台且保持高度统一，给用户最好的体验和服务。……
+                        </div>
+                        <a class="linkBtn btn_tween" href="case.php?#97">查看详情</a>
+                        <!--<a class="link btn_tween" href="http://www.taikang.com/" target="_blank">LINK</a>-->
+                    </div>
+                    <div class="detail">
+                        <div class="focusTitle">福田皮卡网站</div>
+                        <div class="enTitle enFont"></div>
+                        <div class="intro contentFont">
+                            与福团集团官网同期设计开发的福田皮卡子品牌官网，从设计风格上皮卡子网站设计风格与官网保持一致，围绕着皮卡产品做了多角度的展示，全方位的介绍福田、皮卡。后端数据层面由cmp统一管控。……
+                        </div>
+                        <a class="linkBtn btn_tween" href="case.php?#93">查看详情</a>
+                        <!--<a class="link btn_tween" href="http://tunland.foton.com.cn/pickup/" target="_blank">LINK</a>-->
+                    </div>
+                </div>
+                <div class="pageContainer">
+                    <div class="page_1 page"></div>
+                    <div class="page_2 page"></div>
+                    <div class="page_3 page"></div>
+                </div>
+            </div>
+            <div class="homeOther">
+                <div id="homeNews">
+                    <div class="staticTitle enFont">NEWS<span class="smallTitle titleFont">新闻</span><span
+                            style='color:#8a8787;font-size:14px;font-family:"Arial";font-weight: 100;margin-left: 25px'>RECENT</span>
+                    </div>
+                    <div class="subNews">
+                        <a class="title" href="http://www.cn-wbst.cn/blog/?p=527">北京银行数据可视化...</a>
+
+                        <div class="date enFont">2017/03/09</div>
+                        <div class="summary contentFont">北京银行2017年春节前期委托万博思图开发用于大厅里的数据可视化展示。项目重点是用户…</div>
+                    </div>
+                    <div class="subNews">
+                        <a class="title" href="http://www.cn-wbst.cn/blog/?p=521">中标宝沃汽车海外官网品牌...</a>
+
+                        <div class="date enFont">2016/11/30</div>
+                        <div class="summary contentFont">万博思图于近日参与了宝沃汽车海外官网品牌网站的竞标，设计师小伙伴们经过几轮方案的…</div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div id="homeClient">
+                    <div class="staticTitle enFont">CLIENT<span class="smallTitle titleFont">客户</span></div>
+                    <div class="clientPanel">
+                        <div class='client'><img src='picture/jingdonglogo.png' width='94px' height='47px'/></div>
+                        <div class='client'><img src='picture/lanbiao2.png' width='94px' height='47px'/></div>
+                        <div class='client'><img src='picture/guoan2.png' width='94px' height='47px'/></div>
+                        <div class='client'><img src='picture/benchi3.png' width='94px' height='47px'/></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="aboutContainer" class="part">
+        <div class="content">
+            <div class="aboutSummary">
+                <div class="partTitle"><span class="en">ABOUT</span><span class="cn black">关于我们</span></div>
+                <div class="intro">公司简介：<br>北京万博思图（WEBSTUDIO）是一家专注于互动设计， 用户体验设计及数据可视化设计、分析的创新设计公司。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司成立于2007年，在互动设计和互动营销领域有自己独有的理解，相关图书在大陆和台湾同步发行。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们的优势是“
+                    策划+创意+技术 ”的完美融合 —— 以独特的策略、思想为基础，优秀的创意 为主导，雄厚的技术实力为支撑，为客户提供创新设计解决方案 。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司核心业务包括品牌互动设计，视觉营销，web应用，大型数据可视化分析服务等功能完善、
+                    性能稳定的互联网应用解决方案。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;万博思图的客户包括国际和国内知名企业，如国家信息安全中心、梅赛德斯奔驰、大众汽车、蓝色光标、百度迁徙、人民政府外事办、扬思公关、大唐国际，等。<br>凭借优秀的设计理念和雄厚的技术实力，万博思图在行业内快速成长为一股新锐力量
+                    。<p><strong>公司理念：</strong> 内外兼修，创新求实，精益求精。</p>
+
+                    <p><strong>公司口号：</strong> 精致、卓越，成就您的品牌梦想!</p></div>
+            </div>
+            <div id="about">
+                <div class="rec rec1">
+                    <div class="topSub"><img src="picture/about_1_top.jpg"></div>
+                    <div class="rightSub"><img src="picture/about_1_right.jpg"></div>
+                    <div class="bottomSub"><img src="picture/about_1_bottom.jpg"></div>
+                    <div class="leftSub"><img src="picture/about_1_left.jpg"></div>
+                    <div class="centerSub"></div>
+                </div>
+                <div class="rec rec2">
+                    <div class="topSub"><img src="picture/about_2_top.jpg"></div>
+                    <div class="rightSub"><img src="picture/about_2_right.jpg"></div>
+                    <div class="bottomSub"><img src="picture/about_2_bottom.jpg"></div>
+                    <div class="leftSub"><img src="picture/about_2_left.jpg"></div>
+                    <div class="centerSub"></div>
+                </div>
+                <div class="rec rec3">
+                    <div class="topSub"><img src="picture/about_3_top.jpg"></div>
+                    <div class="rightSub"><img src="picture/about_3_right.jpg"></div>
+                    <div class="bottomSub"><img src="picture/about_3_bottom.jpg"></div>
+                    <div class="leftSub"><img src="picture/about_3_left.jpg"></div>
+                    <div class="centerSub"></div>
+                </div>
+                <div class="rec rec4">
+                    <div class="topSub"><img src="picture/about_4_top.jpg"></div>
+                    <div class="rightSub"><img src="picture/about_4_right.jpg"></div>
+                    <div class="bottomSub"><img src="picture/about_4_bottom.jpg"></div>
+                    <div class="leftSub"><img src="picture/about_4_left.jpg"></div>
+                    <div class="centerSub"></div>
+                </div>
+                <div class="rec rec5">
+                    <div class="topSub"><img src="picture/about_5_top.jpg"></div>
+                    <div class="rightSub"><img src="picture/about_5_right.jpg"></div>
+                    <div class="bottomSub"><img src="picture/about_5_bottom.jpg"></div>
+                    <div class="leftSub"><img src="picture/about_5_left.jpg"></div>
+                    <div class="centerSub"></div>
+                </div>
+                <div class="rec rec6">
+                    <div class="topSub"><img src="picture/about_6_top.jpg"></div>
+                    <div class="rightSub"><img src="picture/about_6_right.jpg"></div>
+                    <div class="bottomSub"><img src="picture/about_6_bottom.jpg"></div>
+                    <div class="leftSub"><img src="picture/about_6_left.jpg"></div>
+                    <div class="centerSub"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="serviceContainer" class="part">
+        <div class="content">
+            <div class="partTitle"><span class="en">SERVICE</span><span class="cn white">服务客户</span></div>
+            <div id="service">
+                <div class="servicePanel">
+                    <div class="leftPanel">
+                        <div class="title">
+                            <div class="enTitle enFont">Data visualization design</div>
+                            <div class="cnTitle">数据分析及数据可视化展示</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">UI Design</div>
+                            <div class="cnTitle">界面设计</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Multi-Touch interactive design</div>
+                            <div class="cnTitle">大屏互动展示设计开发</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Data acquisition</div>
+                            <div class="cnTitle">数据采集</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Data analysis</div>
+                            <div class="cnTitle">数据分析</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Data visualization consult and development</div>
+                            <div class="cnTitle">数据可视化咨询与开发</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Individuation system development</div>
+                            <div class="cnTitle">个性化管理平台</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">ＯＡoffice</div>
+                            <div class="cnTitle">统计分析</div>
+                        </div>
+                        <div class="linkBtn btn_tween">服务客户</div>
+                    </div>
+                    <div class="rightPanel">
+                        <div class="mask">
+                            <div class="scrollContainer">
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/jingdonglogo.png" alt='京东' title='京东'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/futianxiaozhineng.png" alt='福田智能'
+                                         title='福田智能' width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/chaoimg.png" alt='超图软件' title='超图软件'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/guojiatjlogo.png" alt='国家统计局'
+                                         title='国家统计局' width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/wsb.png" alt='人民政府外事办' title='人民政府外事办'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/gxb.png" alt='工业和信息化部' title='工业和信息化部'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/guoan2.png" alt='国家互联网应急中心2'
+                                         title='国家互联网应急中心2' width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/benchi3.png" alt='梅赛德斯—奔驰3'
+                                         title='梅赛德斯—奔驰3' width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                            </div>
+                            <div class="close btn_tween"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="servicePanel">
+                    <div class="leftPanel">
+                        <div class="title">
+                            <div class="enTitle enFont">Creative Production</div>
+                            <div class="cnTitle">创意制作</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Micro message game</div>
+                            <div class="cnTitle">html5微信游戏</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Site creative</div>
+                            <div class="cnTitle">flash/html5网站创意设计</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Online marketing ministie</div>
+                            <div class="cnTitle">线上推广活动</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Online marketing AD</div>
+                            <div class="cnTitle">线上AD</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Online Interactive Program Development</div>
+                            <div class="cnTitle">线上应用开发</div>
+                        </div>
+                        <div class="subTitle">
+                            <div class="enTitle enFont">Mobile Internet</div>
+                            <div class="cnTitle">移动互联网</div>
+                        </div>
+                        <div class="linkBtn btn_tween">服务客户</div>
+                    </div>
+                    <div class="rightPanel">
+                        <div class="mask">
+                            <div class="scrollContainer">
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/tianhonglogo.png" alt='天弘基金' title='天弘基金'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/futianlogo.png" alt='福田' title='福田'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/lanbiao2.png" alt='蓝色光标' title='蓝色光标'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/nuojiya.png" alt='诺基亚' title='诺基亚'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/benchi3.png" alt='梅赛德斯—奔驰2'
+                                         title='梅赛德斯—奔驰2' width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/dazhong.png" alt='大众尚酷R' title='大众尚酷R'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/wjkj.png" alt='万集科技' title='万集科技'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/ttgamelogo.png" alt='天天炫斗' title='天天炫斗'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/jiwei.png" alt='吉威' title='吉威'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/jiaotukeji.png" alt='椒图科技' title='椒图科技'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/zhongsheng.png" alt='众生平安' title='众生平安'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/zhongliang.png" alt='中粮' title='中粮'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/fotic.png" alt='中国对外经济贸易信托公司'
+                                         title='中国对外经济贸易信托公司' width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/yousen.png" alt='优森美驰会展服务有限公司'
+                                         title='优森美驰会展服务有限公司' width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/yangsi.png" alt='扬思公关' title='扬思公关'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/xinao.png" alt='新奥购物中心' title='新奥购物中心'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/niersen.png" alt='尼尔森' title='尼尔森'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/lvvmeng.png" alt='绿盟' title='绿盟'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/lingmu.png" alt='铃木' title='铃木'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/jimei.png" alt='集美鲜花' title='集美鲜花'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/hanwang.png" alt='汉王科技' title='汉王科技'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/fengtian.png" alt='丰田' title='丰田'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/beijingdaxue.png" alt='北京大学' title='北京大学'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/baobeijia.png" alt='宝贝家' title='宝贝家'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                            </div>
+                            <div class="close btn_tween"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="servicePanel">
+                    <div class="leftPanel">
+                        <div class="title">
+                            <div class="enTitle enFont">Brand Interactive strategy</div>
+                            <div class="cnTitle">策略规划</div>
+                        </div>
+                        <div class="subTitle">
+                            <div class="enTitle enFont">Direction of propagation</div>
+                            <div class="cnTitle">传播方向</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Delivering value</div>
+                            <div class="cnTitle">传递价值</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Interactive manner</div>
+                            <div class="cnTitle">互动形式</div>
+                        </div>
+                        <div class="linkBtn btn_tween">服务客户</div>
+                    </div>
+                    <div class="rightPanel">
+                        <div class="mask">
+                            <div class="scrollContainer">
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/tianmai.png" alt='天脉聚源传媒科技有限公司'
+                                         title='天脉聚源传媒科技有限公司' width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/jinsetongnian.png" alt='金色童年儿童摄影'
+                                         title='金色童年儿童摄影' width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/datang.png" alt='大唐国际发电股份有限公司'
+                                         title='大唐国际发电股份有限公司' width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                            </div>
+                            <div class="close btn_tween"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="servicePanel">
+                    <div class="leftPanel">
+                        <div class="title">
+                            <div class="enTitle enFont">Product Development</div>
+                            <div class="cnTitle">产品开发</div>
+                        </div>
+                        <div class="subTitle">
+                            <div class="enTitle enFont">Webos framework</div>
+                            <div class="cnTitle">人机交互框架</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Peacock CMS</div>
+                            <div class="cnTitle">信息管理发布平台</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">HPLC</div>
+                            <div class="cnTitle">数据可视化分析</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Components</div>
+                            <div class="cnTitle">通用组件</div>
+                        </div>
+                        <div class="linkBtn btn_tween">服务客户</div>
+                    </div>
+                    <div class="rightPanel">
+                        <div class="mask">
+                            <div class="scrollContainer">
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/tianrongxin.png" alt='天融信' title='天融信'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/qimingxing.png" alt='启明星辰信息技术有限公司'
+                                         title='启明星辰信息技术有限公司' width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                            </div>
+                            <div class="close btn_tween"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="servicePanel">
+                    <div class="leftPanel">
+                        <div class="title">
+                            <div class="enTitle enFont">Customer Management</div>
+                            <div class="cnTitle">客户管理</div>
+                        </div>
+                        <div class="subTitle">
+                            <div class="enTitle enFont">Maintenance</div>
+                            <div class="cnTitle">内容/关系维护</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Seo</div>
+                            <div class="cnTitle">移动/网络优化</div>
+                        </div>
+                        <div class="subTitle cir">
+                            <div class="enTitle enFont">Date excavation</div>
+                            <div class="cnTitle">数据挖掘</div>
+                        </div>
+                        <div class="linkBtn btn_tween">服务客户</div>
+                    </div>
+                    <div class="rightPanel">
+                        <div class="mask">
+                            <div class="scrollContainer">
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/benchi.png" alt='梅赛德斯—奔驰' title='梅赛德斯—奔驰'
+                                         width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                                <div class="client">
+                                    <img class="delayImage" final-src="picture/guojiahulianwang.png" alt='国家互联网应急中心'
+                                         title='国家互联网应急中心' width="200px" height="100px" src="images/empty.png"/>
+                                </div>
+                            </div>
+                            <div class="close btn_tween"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="newsContainer" class="part">
+        <div class="content">
+            <div class="partTitle"><span class="en">NEWS</span><span class="cn white">新闻动态</span></div>
+            <div id="news">
+                <div class="newsPanel">
+                    <div class="thumb"><img class="delayImage" width="390px" height="244px"
+                                            final-src="picture/beijingbank03.jpg" src="images/empty.png"/></div>
+                    <div class="detail">
+                        <div class="date enFont">2017/03/09</div>
+                        <div class="title">北京银行数据可视化...</div>
+                        <div class="intro contentFont">北京银行2017年春节前期委托万博思图开发用于大厅里的数据可视化展示。项目重点是用户…</div>
+                        <a class="linkBtn btn_tween" href="http://www.cn-wbst.cn/blog/?p=527" target="_blank">查看详情</a>
+                    </div>
+                </div>
+                <div class="newsPanel">
+                    <div class="thumb"><img class="delayImage" width="390px" height="244px"
+                                            final-src="picture/baowo.jpg" src="images/empty.png"/></div>
+                    <div class="detail">
+                        <div class="date enFont">2016/11/30</div>
+                        <div class="title">中标宝沃汽车海外官网...</div>
+                        <div class="intro contentFont">万博思图于近日参与了宝沃汽车海外官网品牌网站的竞标，设计师小伙伴们经过几轮方案的…</div>
+                        <a class="linkBtn btn_tween" href="http://www.cn-wbst.cn/blog/?p=521" target="_blank">查看详情</a>
+                    </div>
+                </div>
+                <div class="newsPanel">
+                    <div class="thumb"><img class="delayImage" width="390px" height="244px" final-src="picture/wawj.jpg"
+                                            src="images/empty.png"/></div>
+                    <div class="detail">
+                        <div class="date enFont">2016/11/29</div>
+                        <div class="title">我爱我家数据可视化大...</div>
+                        <div class="intro contentFont">2016年11月，万博思图与我爱我家集团达成合作，为我家我家开发数据可视化大屏幕。本次…</div>
+                        <a class="linkBtn btn_tween" href="http://www.cn-wbst.cn/blog/?p=516" target="_blank">查看详情</a>
+                    </div>
+                </div>
+                <div class="newsPanel">
+                    <div class="thumb"><img class="delayImage" width="390px" height="244px"
+                                            final-src="picture/jd2016.jpg" src="images/empty.png"/></div>
+                    <div class="detail">
+                        <div class="date enFont">2016/11/22</div>
+                        <div class="title">2016京东双十一数据可...</div>
+                        <div class="intro contentFont">继2016年京东618之后，万博思图在次挑战2016年京东双十一数据可视化项目。项目历时一个…</div>
+                        <a class="linkBtn btn_tween" href="http://www.cn-wbst.cn/blog/?p=507" target="_blank">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="jobContainer" class="part">
+        <div class="content">
+            <div class="partTitle"><span class="en">JOIN US</span><span class="cn white">招贤纳士</span></div>
+            <div id="job">
+                <div class="prev t"></div>
+                <div class="mask">
+                    <div class="scrollPanel">
+                        <div class="item">
+                            <div class="thumbPanel">
+                                <div class="thumb"><img class="delayImage" width="210px" height="250px"
+                                                        final-src="picture/job_5_11_1.jpg" src="images/empty.png"></div>
+                                <div class="enTitle enFont btn_tween">Marketing Director</div>
+                                <div class="cnTitle btn_tween">市场营销主管</div>
+                            </div>
+                            <div class="introData">岗位职责：<br><br>1. 进行团队建设、管理下属，提出和审核对下属人员的调配、培训及考核意见。<br>2.
+                                制定具体工作计划并进行工作部署、人员分配，协调部门内部与部门之间各成员的协作，把控和监督项目进度与质量，评估项目风险并进行管控。<br>3.
+                                负责与客户方项目对接人进行沟通，策略性地说服引导客户。<br>4.
+                                能独立进行项目投标、商务谈判工作，起草、修订、完善项目合作合同，并在项目执行过程中全程跟进，直到项目完成并回款。<br>5.
+                                负责公司项目、产品等相关文案策划（微信、推送、新闻功能、广告投放、微博等）、撰写、定稿、传播发布，分析客户需求，迎合客户需求策划能打动客户的文案及视觉页面。<br>6.
+                                能够结合热点事件迅速的推出有创意的营销策划及具体方案，负责收集市场推广及客户反馈的数据，并作基础分析，提供分析建议。<br>7.
+                                项目完成后召开项目总结会议，结合客户的反馈编写项目总结，并最终提交市场副总。<br><br>任职要求：<br><br>1.
+                                2年以上互联网行业市场工作经验,有公关公司、传媒广告公司工作经验者优先。<br>2.
+                                熟悉各大类媒体、传播渠道，有一定人脉和资源，能快速精准运用各种新兴渠道进行市场推广、活动策划。<br>3. 有丰富的线上活动策划、市场推广经验，有成功案例者优先。<br>4.
+                                具有敏锐的商业和市场意识、较强的文案功底，可独立撰写相关活动推广文案。<br>5. 有公关工作经验者优先。
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumbPanel">
+                                <div class="thumb"><img class="delayImage" width="210px" height="250px"
+                                                        final-src="picture/job_5_11_2.jpg" src="images/empty.png"></div>
+                                <div class="enTitle enFont btn_tween">Marketing Specialist</div>
+                                <div class="cnTitle btn_tween">市场专员</div>
+                            </div>
+                            <div class="introData">岗位职责：<br><br>1. 与现有客户沟通，保持良好关系，对有意向客户进行跟踪，以便完成销售任务。<br>2.
+                                随时观察、了解市场新动向，积极主动的开拓新市场。<br>3. 进行商务谈判，起草、修订、完善合作合同，并在合同执行过程中跟进，跟踪合同完成后的回款工作。<br>4.
+                                项目完成后及时进行项目总结，做好客户回访<br>5. 部门内部、部门之间及对外的协调沟通。<br><br>任职要求：<br><br>1. 市场营销、广告学专业者优先。<br>2.
+                                熟练使用各种办公软件，具有使用PPT进行市场提案的能力。<br>3. 具备深厚的文字功底和文案策划能力，文笔流畅，思维敏捷，有成功的独立文案策划案例。<br>4.
+                                具备良好的组织、沟通、协调能力以及应对突发事件的应变能力。<br>5. 具备1年以上销售或客户开发类工作经验且业绩良好。<br>6. 有开发长期合作客户经验者优先。<br>7.
+                                有公关工作经验者优先。
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumbPanel">
+                                <div class="thumb"><img class="delayImage" width="210px" height="250px"
+                                                        final-src="picture/job_5_11_3.jpg" src="images/empty.png"></div>
+                                <div class="enTitle enFont btn_tween">Marketing Planning Specialist</div>
+                                <div class="cnTitle btn_tween">市场策划专员</div>
+                            </div>
+                            <div class="introData">岗位职责：<br><br>1. 协助上级制定公司项目、产品的策划分析、卖点提炼和细化等工作。<br>2.
+                                负责公司项目、产品等相关文案策划（微信、推送、新闻功能、广告投放、微博等）、撰写、定稿、传播发布。<br>3.
+                                负责公司项目、产品宣传材料的撰写与管理，包括：新闻稿、内宣稿、品牌宣传及推广等。<br>4. 负责分析客户需求，迎合客户需求策划能打动客户的文案及视觉页面。<br>5.
+                                负责收集市场推广及客户反馈的数据，并作基础分析，提供分析建议。<br>6. 能够结合热点事件迅速的推出有创意的营销策划及具体方案。<br><br>任职要求：<br><br>1.
+                                大专以上学历，新闻、中文、广告等相关专业优先，1年以上广告、媒体、互联网行业的文案工作者优先 。<br>2.
+                                善于倾听，出色的任务理解能力；善于提炼信息，抓住关键点和闪光点；条理分明，逻辑清晰；熟悉各类文体，快速成文，文笔优美；有独立的观点、创意性思维。<br>3.
+                                把握互联网新媒体推广方式，拥有较深厚的运营经验。<br>4. 有较强的责任感、高度的团队合作精神、良好的沟通协调能力。<br>5.
+                                有良好的执行力与抗压能力，具有快速的判断与撰写能力。
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumbPanel">
+                                <div class="thumb"><img class="delayImage" width="210px" height="250px"
+                                                        final-src="picture/job_5_11_4.jpg" src="images/empty.png"></div>
+                                <div class="enTitle enFont btn_tween">Marketing Planning Specialist</div>
+                                <div class="cnTitle btn_tween">市场策划专员</div>
+                            </div>
+                            <div class="introData">我们需要你：<br><br>1. 正规本科院校艺术专业，手绘功夫扎实，这点尤为重要。<br>2.
+                                平面功夫深厚，拥有五到八年互联网行业/其他平面行业设计经验，有独立成熟的个 案，且熟悉网站、大数据、用户体验。<br>3.
+                                能够拔高团队设计水准，给团队成员作出清晰有效的设计指导和支持，并对其工作成果进行审核。<br>4. 敏捷的前沿潮流信息捕捉能力，独特优秀的审美，出色的视觉表现力。<br>5.
+                                思维敏捷，逻辑清晰，表达能力优秀，乐观、开朗、善良、稳重，擅于团队合作，责任心强。<br>6.
+                                研究行业领域的新兴创意和技术，在确保项目质量与进度的前提下，尝试在项目中新创意的应用和推广。
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumbPanel">
+                                <div class="thumb"><img class="delayImage" width="210px" height="250px"
+                                                        final-src="picture/job_5_11_5.jpg" src="images/empty.png"></div>
+                                <div class="enTitle enFont btn_tween">Visual Designer</div>
+                                <div class="cnTitle btn_tween">视觉设计师</div>
+                            </div>
+                            <div class="introData">助理设计师：<br><br>我们需要你：<br>1. 正规美院应届毕业生，手绘功夫扎实过硬，这点尤为重要。<br>2.
+                                创新思维突出，有出色的视觉表现力。<br>3. 思维敏捷，逻辑清晰，表达能力优秀。<br>4. 乐观、开朗、善良、稳重，责任心强。<br>5.
+                                希望你有几把刷子：精通Photoshop / Illustrator / Office办公软件。<br><br>你的工作是：<br>服从配合设计主管的安排，按时保质完成分配的工作，按时汇报工作<br><br>高级设计师：<br><br>我们需要你：<br>1.
+                                正规本科院校艺术专业，手绘功夫扎实，这点尤为重要。<br>2. 平面功夫深厚，拥有三年以上互联网行业/其他平面行业设计经验，有独立成熟的个
+                                案，且熟悉网站、大数据、用户体验。<br>3. 敏捷的前沿潮流信息捕捉能力，独特优秀的审美，出色的视觉表现力。<br>4.
+                                思维敏捷，逻辑清晰，表达能力优秀。乐观、开朗、善良、稳重，擅于团队合作，责任心强。<br>5. 工欲善其事，必先利其器，希望你有几把刷子。<br><br>你的工作是：<br>1.
+                                服从配合设计主管的安排，按时保质完成分配的工作，按时汇报工作。<br>2. 独立完成项目提案工作。<br>3. 独立解决项目中的难点部分，协助设计主管把控项目质量。<br>4.
+                                研究行业领域的新兴创意和技术，在确保项目质量与进度的前提下，尝试在项目中新创意的应用和推广。<br>5.需对视觉设计师、助理设计师作出相应的设计指导及设计支持，并对其工作成果进行审核，如设计的颜色、素材的规范等。<br><br>资深设计师：<br><br>我们需要你：<br>1.
+                                正规本科院校艺术专业，手绘功夫扎实，这点尤为重要。<br>2. 平面功夫深厚，拥有五年左右互联网行业/其他平面行业设计经验，有独立成熟的个
+                                案，且熟悉网站、大数据、用户体验。<br>3. 敏捷的前沿潮流信息捕捉能力，独特优秀的审美，出色的视觉表现力。<br>4.
+                                思维敏捷，逻辑清晰，表达能力优秀。乐观、开朗、善良、稳重，擅于团队合作，责任心强。<br>5. 工欲善其事，必先利其器，希望你有几把刷子。<br><br>你的工作是：<br>1.
+                                服从配合设计主管的安排，按时保质完成分配的工作，按时汇报工作。<br>2.
+                                独立完成项目提案工作：与客户洽谈，咨询相关设计意见；在规定时间内设计出具有创意、设计质量高的作品，直到客户满意。<br>3.
+                                独立解决项目中的难点部分，协助设计主管把控项目质量。<br>4. 研究行业领域的新兴创意和技术，在确保项目质量与进度的前提下，尝试在项目中新创意的应用和推广。<br>5.
+                                对上级分配的任务进行拆解，配合设计主管分配子任务给相关团队成员，监督把控任务实现的质量与进度<br>6.
+                                配合设计主管，对团队成员作出相应的设计指导及设计支持，并对其工作成果进行审核
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumbPanel">
+                                <div class="thumb"><img class="delayImage" width="210px" height="250px"
+                                                        final-src="picture/job_5_11_6.jpg" src="images/empty.png"></div>
+                                <div class="enTitle enFont btn_tween">Technical Director</div>
+                                <div class="cnTitle btn_tween">技术总监</div>
+                            </div>
+                            <div class="introData">岗位职责：<br><br>1. 调研和分析行业技术发展趋势，规划与制定公司的技术发展以及产品研发方向。<br>2.
+                                研究行业领域的新兴技术，评估成型业务的发展态势，跟踪并发展新型业务，保持公司技术的先进性。<br>3. 主导公司核心产品与通用组件的开发和维护。<br>4.
+                                制定培训计划，分享技术经验，提升团队技术水平。<br>5.
+                                需对高级开发工程师及以上的开发人员作出相应的技术指导，并对其工作成果进行审核，如代码的书写规范、代码质量、需求满足程度等。<br>6.
+                                在项目中详细分析用户需求，对系统技术架构进行整体规划，并合理选型，分配与监督团队成员对需求分析、架构设计和技术方案选型的实施，撰写关键性技术文档。<br>7.
+                                编写技术类战略性报告，指导解决项目实施过程中的技术难点，把控项目质量。<br><br>任职要求：<br><br>1. 计算机相关专业本科及以上学历，7年以上工作经验。<br>2.
+                                精通Java语言与主流框架，可熟练操作数据库表，精通服务器环境配置。<br>3. 精通常见应用软件系统的架构，可熟练使用设计模式实现标准、健壮、可扩展的系统架构设计。<br>4.
+                                具备出色的学习能力，可熟练使用SVN、GIT等版本控制软件。<br>5. 具备丰富的团队管理经验（至少3年团队领导经验，团队规模不小于10人。<br>6.
+                                熟练掌握HTML、JavaScript前端语言者优先。<br>7. 熟练掌握Hadoop、Spark等大数据项目者优先。
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumbPanel">
+                                <div class="thumb"><img class="delayImage" width="210px" height="250px"
+                                                        final-src="picture/job_5_11_7.jpg" src="images/empty.png"></div>
+                                <div class="enTitle enFont btn_tween">Project Manager</div>
+                                <div class="cnTitle btn_tween">项目经理</div>
+                            </div>
+                            <div class="introData">我们需要你：<br><br>1. 本科及以上学历，4年以上的软件开发和项目实施经验。<br>2.
+                                2年以上互联网工作经验，熟练掌握HTML5/Flex/Java/php一种以上开发技术。<br>3. 熟悉网站、移动网站、大数据、用户体验。<br>4.
+                                熟练使用axure工具绘制高保真界面原型。<br>5. 思维敏捷，逻辑清晰，表达能力强，善于沟通，能够准确把握用户的需求。<br>6.
+                                积极主动，责任心强，善于团队合作。<br>7. 工作具有良好的计划性和前瞻性，执行力强。<br><br>你的工作是：<br><br>1.
+                                配合其他部门完成需求调研工作，将工作进行拆解，编写项目相关文档，并评审通过。<br>2. 完成分配的开发工作。<br>3.
+                                负责项目的整个过程，控制项目进度，管理项目团队，组织工程师完成各项功能的开发和实施，保证项目各项工作顺利进行，完成项目的验收和总结。<br>4.
+                                服从上级安排，快速保质保量完成分配的任务，按时向上级汇报工作进度和问题，并经常提出工作建议。
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumbPanel">
+                                <div class="thumb"><img class="delayImage" width="210px" height="250px"
+                                                        final-src="picture/job_5_11_8.jpg" src="images/empty.png"></div>
+                                <div class="enTitle enFont btn_tween">Senior PHP Developer</div>
+                                <div class="cnTitle btn_tween">高级PHP开发工程师</div>
+                            </div>
+                            <div class="introData">我们需要你：<br><br>1.
+                                大专以上学历，至少1年的PHP实际应用开发经验的开发人员，或对PHP后端开发有浓厚兴趣并对PHP后端开发较为熟悉的应届毕业生亦可。<br>2.
+                                熟练掌握OOP面向对象程序设计，以及部分基础的设计模式。<br>3. 熟练掌握MySQL数据库的SQL语法与功能特性。<br>4. 熟悉js,
+                                jquery，熟悉JSON、XML等数据交换格式。<br>5. 认真、严谨、友好、富有责任感，适应团队合作模式，并具备良好的逻辑思路和代码书写习惯。<br>6.
+                                熟练掌握PHP5及其特性，熟练使用内置的方法与SPL类型进行面向过程式的应用开发，熟悉PHP面向对象模型并擅长此类型开发者优先。<br>7.
+                                熟练掌握至少一种成熟PHP框架优先，如Zend、Cakephp、Yii、CodeIgniter、ThinkPHP等。<br>8.
+                                熟练掌握至少一种PHP开源商业产品的组织结构、特性与二次开发技术，如Discuz、EcShop、PHPCMS、vBulletin等，熟悉基于其插件机制进行功能开发或多种产品功能整合者优先。<br>9.
+                                熟悉切图与页面编码技术，能自行将设计师所提供的设计文稿（如PSD、AI等），准确地编码为符合规范的HTML页面优先。<br>10.
+                                熟悉至少一种模板引擎，熟练掌握Smarty等业界优秀模板引擎者优先。<br>11.
+                                熟悉以HttpService、WebService等方式与前端进行通信或交互，熟练掌握Socket、AMFPHP通信者优先。<br><br>你的工作是：<br><br>1.
+                                独立高效地完成功能模块的设计、开发、单元测试。<br>2. 编写相关模块的设计文档。<br>3.
+                                服从上级安排，快速保质保量完成分配的任务，按时向上级汇报工作，并经常提出工作建议。
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumbPanel">
+                                <div class="thumb"><img class="delayImage" width="210px" height="250px"
+                                                        final-src="picture/job_5_11_9.jpg" src="images/empty.png"></div>
+                                <div class="enTitle enFont btn_tween">HTML5 Developer</div>
+                                <div class="cnTitle btn_tween">HTML5前端开发工程师</div>
+                            </div>
+                            <div class="introData">我们需要你：<br><br>1.
+                                大专以上学历，至少1年的前端HTML、CSS、JavaScript实际应用开发经验的开发人员，或对前端开发有浓厚兴趣并对前端开发较为熟悉的应届毕业生亦可。<br>2.
+                                热爱各种形式前端呈现与人机交互技术，认真、严谨、友好、富有责任感，适应团队合作模式，并具备良好的逻辑思路和代码书写习惯。<br>3.
+                                熟练掌握W3C的HTML结构化定义标准，熟悉HTML5者优先。<br>4.
+                                熟练掌握HTML标签属性、CSS样式的工作原理、盒模型概念以及浏览器兼容HACK，熟悉响应式设计、移动浏览器呈现兼容者优先。<br>5.
+                                熟练掌握切图与页面编码技术，能自行将设计师所提供的设计文稿（如PSD、AI等），准确地编码为符合规范的HTML页面，并保证其在各大操作系统平台主流浏览器（如IE版本6及以上、Firefox、Chrome、Safari等，以及其他基于IE、WebKit等内核的外壳式浏览器，如360、搜狗等）中呈现的一致性，兼容Android、iOS平台移动浏览器者优先。<br>6.
+                                熟练掌握OOP面向对象程序设计，以及部分基础的设计模式。<br>7.
+                                熟练掌握JavaScript语言特性，对JavaScript语言的面向对象以及原型链机制深入理解者优先。<br>8.
+                                熟练掌握至少一种JavaScript框架，如JQuery等，能灵活运用框架进行页面的功能与效果开发，如筛选HTML元素、动态设置CSS样式、事件绑定与卸载、动态展示、通过Ajax方式与后端进行通信等。<br>9.
+                                熟练使用Unix命令进行远程终端操作。<br>10. 熟悉JSON、XML等数据交换格式。<br>11. 熟悉HTTP协议、JavaScript沙盒模型等前端底层概念。<br>12.
+                                熟悉HTML5新引入特性，诸如Canvas2D、WebGL、本地离线存储等，并有试验成果者优先。<br>13.
+                                必须提供至少一到两个成熟案例。<br><br>你的工作是：<br><br>1. 与设计团队紧密配合，能够实现设计师的设计想法。<br>2.
+                                与后端开发团队紧密配合，确保代码有效对接，优化网站前端性能。<br>3. 负责公司现有项目和新项目的前端修改调试和开发工作，以及其他前端开发工作。<br>4.
+                                服从上级安排，快速保质保量完成分配的任务，按时向上级汇报工作，并经常提出工作建议。
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumbPanel">
+                                <div class="thumb"><img class="delayImage" width="210px" height="250px"
+                                                        final-src="picture/job_5_11_10.jpg" src="images/empty.png">
+                                </div>
+                                <div class="enTitle enFont btn_tween">Flex Developer</div>
+                                <div class="cnTitle btn_tween">Flex 开发工程师</div>
+                            </div>
+                            <div class="introData">我们需要你：<br><br>1.
+                                大专以上学历，至少1年的Flex实际应用开发经验的开发人员，或对Flex交互应用有浓厚兴趣并对Flex开发较为熟悉的应届毕业生亦可。<br>2.
+                                热爱各种形式的人机交互技术，认真、严谨、友好、富有责任感，适应团队合作模式，并具备良好的逻辑思路和代码书写习惯。<br>3.
+                                熟练掌握OOP面向对象程序设计，以及部分基础的设计模式。<br>4.
+                                熟练掌握ActionScript3及其特性，熟练使用内置类进行应用开发以及熟悉ActionScript3底层应用者优先。<br>5.
+                                熟练掌握Flex4框架及其特性，并熟悉其呈现、布局等原理，能熟练使用mx包或spark包的内置组件（包括chart包中的图表组件），能熟练开发自定义的Flex组件，包括重写内置组件的ItemRenderer、Skin以及使用Flex本身特性自行开发特殊功能组件。<br>6.
+                                熟练使用HttpService、WebService、RemoteObject进行RPC交互，熟练掌握Socket、AMF Channel通信者优先。<br>7.
+                                熟练使用Unix命令进行远程终端操作。<br>8. 熟悉JSON、XML等数据交换格式。<br>9.
+                                熟悉GIT、SVN，在实际工作或学习中使用过这类软件进行版本控制者优先。<br>10. 熟悉至少一种MVC框架。<br><br>你的工作是：<br><br>1.
+                                独立高效地完成功能模块的设计、开发。<br>2. 编写相关模块的设计文档。<br>3. 服从上级安排，快速保质保量完成分配的任务，按时向上级汇报工作，并经常提出工作建议。
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumbPanel">
+                                <div class="thumb"><img class="delayImage" width="210px" height="250px"
+                                                        final-src="picture/job_5_11_11.jpg" src="images/empty.png">
+                                </div>
+                                <div class="enTitle enFont btn_tween">Java Developer</div>
+                                <div class="cnTitle btn_tween">Java 开发工程师</div>
+                            </div>
+                            <div class="introData">Java开发工程师：<br><br>我们需要你：<br>1. 本科及以上学历，2年以上的Java开发经验。<br>2.
+                                Java基础知识扎实，熟练掌握Spring, SpringMVC, Hibernate/MyBatis等开源框架，熟练掌握js, jquery。<br>3.
+                                熟练掌握MySQL/Oracle等关系数据库系统。<br>4. 对技术和代码质量有较高的追求，积极主动，工作具有良好的计划性。<br>5.
+                                思维敏捷，逻辑清晰，能够沟通并准确理解需求。<br><br>你的工作是：<br>1. 独立高效地完成功能模块的设计、开发、单元测试。<br>2.
+                                编写相关模块的设计文档。<br>3. 服从上级安排，快速保质保量完成分配的任务，按时向上级汇报工作，并经常提出工作建议。<br><br>Java高级开发工程师：<br><br>我们需要你：<br>1.
+                                本科及以上学历，3年以上的Java开发经验。<br>2. Java基础知识扎实，熟练掌握Spring, SpringMVC,
+                                Hibernate/MyBatis等开源框架，熟练掌握js, jquery。<br>3. 熟练掌握MySQL/Oracle等关系数据库系统，熟悉Linux系统。<br>4.
+                                1年以上互联网工作经验，熟悉HTML5和大数据技术，熟悉手机网站、微信等移动端开发技术。<br>5. 思维敏捷，逻辑清晰，沟通和需求理解的能力强。<br>6.
+                                积极主动，工作具有良好的计划性，执行力强。<br>7. 乐观、宽容，能够融洽地与同事相处。<br><br>你的工作是：<br>1.
+                                独立高效地完成功能模块的设计、开发、单元测试，对初级工程师进行工作指导，对代码进行审查。<br>2. 编写相关模块的设计文档及项目需要的其他文档。<br>3.
+                                关注技术的新动向，对关键技术进行攻坚，定期组织技术培训。<br>4. 服从上级安排，快速保质保量完成分配的任务，按时向上级汇报工作，并经常提出工作建议。<br><br>Java资深工程师：<br><br>我们需要你：<br>1.
+                                本科及以上学历，5年以上的Java开发经验。<br>2. Java基础知识扎实，熟练掌握Spring, SpringMVC,
+                                Hibernate/MyBatis等开源框架，熟练掌握JVM，多线程技术，服务框架。<br>3.
+                                熟练掌握MySQL/Oracle等关系数据库系统，熟悉Linux系统及各种应用和服务的运维。<br>4.
+                                3年以上互联网工作经验，熟练掌握HTML5和数据可视化展示技术，熟悉手机网站、微信等移动端开发技术。<br>5. 思维敏捷，逻辑清晰，沟通和需求理解的能力强。<br>6.
+                                积极主动，工作具有良好的计划性，执行力强，能随时发现并解决问题。<br>7. 乐观、宽容，能够融洽地与同事相处。<br><br>你的工作是：<br>1.
+                                独立高效地完成功能模块的设计、开发、单元测试，对工程师和高级工程师进行工作指导和审核。<br>2. 编写相关模块的设计文档及项目需要的其他文档。<br>3.
+                                关注行业技术动态，对关键技术进行攻坚，定期组织技术培训，给项目和公司的决策提供技术支撑。<br>4.
+                                服从上级安排，快速保质保量完成分配的任务，按时向上级汇报工作，能经常提出建设性的建议。
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumbPanel">
+                                <div class="thumb"><img class="delayImage" width="210px" height="250px"
+                                                        final-src="picture/job_5_11_12.jpg" src="images/empty.png">
+                                </div>
+                                <div class="enTitle enFont btn_tween">Architect</div>
+                                <div class="cnTitle btn_tween">架构师</div>
+                            </div>
+                            <div class="introData">岗位职责：<br><br>1. 负责核心服务框架和核心系统的架构设计和开发；对开发团队进行技术指导和培训，规范开发流程。<br>2.
+                                负责设计和搭建应用系统架构（平台、数据库、应用架构等）。<br>3. 负责应用系统核心功能模块设计、核心代码开发。<br>4. 负责技术解决方案的编制工作，为开发人员分配工作。<br>5.
+                                主导项目关键技术问题的攻关，负责组织技术架构、解决方案的评审。<br>6. 对开发团队进行技术指导和培训。<br><br>任职要求：<br><br>1、重点本科以上学历，有互联网大型网站工作经验优先。<br>2、4年以上java开发经验，至少2年以上中大型web应用系统架构设计经验。<br>3、扎实的java基础，熟练运用常用设计模式。<br>4、熟练运用Spring、iBATIS、Struts、jQuery等web框架，熟悉RPC、分布式、多线程、cache、MQ、网络编程等高性能架构相关开发技术。<br>5、熟悉常用的数据库oracle,mysql等,具有一定的数据库调优经验及sql优化经验并对架构原理有深入的理解。<br>6、具有扎实的算法及数据结构功底。<br>7、有较好的沟通交流、团队协作能力。
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumbPanel">
+                                <div class="thumb"><img class="delayImage" width="210px" height="250px"
+                                                        final-src="picture/job_5_11_13.jpg" src="images/empty.png">
+                                </div>
+                                <div class="enTitle enFont btn_tween">Administrative Human</div>
+                                <div class="cnTitle btn_tween">行政人力</div>
+                            </div>
+                            <div class="introData">岗位职责：<br><br>1.
+                                需要有2年以上的行政人力经验。负责公司各项制度的制定，能够根据公司的实际情况对各项制度进行完善。有过制定公司绩效考核制度经验优先考滤。<br>2.
+                                负责公司的人才招聘，有ＩＴ类和设计类人才招聘的相关经验。在人力资源方面有一定的经验。<br>3. 协助经理作好经营服务各项管理并督促、检查落实贯彻执行情况。<br>4.
+                                做好办公会议和其他会议的组织工作和会议纪录。做好决议、决定等文件的起草、发布。<br>5. 做好企业内外文件的发放、登记、传递、催办、立卷、归档工作。<br>6.
+                                负责企业内外的公文办理，解决来信、来访事宜，及时处理、汇报。<br>7. 性格开朗，善于沟通，团结协作的能力。<br>8. 中英文语言类专业为佳。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="next t"></div>
+                <ul class="pageContainer">
+                    <li class="pageBase"></li>
+                </ul>
+                <div class="blackMask"></div>
+                <div class="detailContainer">
+                    <div class="detailPrev btn_tween"></div>
+                    <div class="detailPanel">
+                        <div class="title">
+                            <div class="en enFont"></div>
+                            <div class="cn"></div>
+                        </div>
+                        <div class="close btn_tween"></div>
+                        <div class="intro">
+                            <div class="mask">
+                                <div class="scrollPanel contentFont"></div>
+                            </div>
+                            <div class="scrollBar">
+                                <div class="dragger"></div>
+                            </div>
+                            <div class="info">TEL : 010－85990057&nbsp;&nbsp;010－85992077　HR:13693660520 (王先生)　EMAIL : <a
+                                    href="mailto:webstudio@webstudio.com.cn">webstudio@webstudio.com.cn</a></div>
+                        </div>
+                    </div>
+                    <div class="detailNext btn_tween"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contactContainer" class="part">
+        <div class="content">
+            <div class="partTitle"><span class="en">CONTACT</span><span class="cn black">联系我们</span></div>
+            <div id="contact">
+                <div class="guestBook">
+                    <form id="form1" action="#" method="get"><input type="text" value="姓　名" id="form_user_name"
+                                                                    name="user_name" class="input_text"> <input
+                            type="text" value="电　话" id="form_phone" name="phone" class="input_text"> <input type="text"
+                                                                                                            value="箱　邮"
+                                                                                                            id="form_email"
+                                                                                                            name="email"
+                                                                                                            class="input_text"><textarea
+                            name="msg" id="form_msg" cols="20" rows="6" class="textarea">留　言</textarea>
+
+                        <div id="btnContainer">
+                            <div id="submit_btn" class="btn btn_tween">提交</div>
+                            <div id="reset_btn" class="btn btn_tween">重置</div>
+                        </div>
+                        <div class="error_tip"></div>
+                        <div class="send_tip"></div>
+                    </form>
+                </div>
+                <div class="msgItem msgItem_out btn_tween">
+                    <div class="miniContent">想咨询一下数据可视…</div>
+                    <div class="fullContent"> 想咨询一下数据可视化服务</div>
+                    <div class="icon"></div>
+                </div>
+                <div class="msgItem msgItem_out btn_tween">
+                    <div class="miniContent">我们需要做数据可视…</div>
+                    <div class="fullContent"> 我们需要做数据可视化设计</div>
+                    <div class="icon"></div>
+                </div>
+                <div class="msgItem msgItem_out btn_tween">
+                    <div class="miniContent">咨询制站…</div>
+                    <div class="fullContent"> 咨询制站</div>
+                    <div class="icon"></div>
+                </div>
+                <div class="msgItem msgItem_out btn_tween">
+                    <div class="miniContent">确实很牛，给点技术…</div>
+                    <div class="fullContent"> 确实很牛，给点技术支持啊。</div>
+                    <div class="icon"></div>
+                </div>
+                <div class="msgItem msgItem_out btn_tween">
+                    <div class="miniContent">集团公司要进行官方…</div>
+                    <div class="fullContent"> 集团公司要进行官方微信的改版和网站的重新设计，希望进行沟通</div>
+                    <div class="icon"></div>
+                </div>
+                <div class="msgItem msgItem_out btn_tween">
+                    <div class="miniContent">这个网站做的真牛B…</div>
+                    <div class="fullContent"> 这个网站做的真牛B，我们公司做个一样漂亮一样个性的多少钱啊？</div>
+                    <div class="icon"></div>
+                </div>
+                <div class="msgItem msgItem_out btn_tween">
+                    <div class="miniContent">厉害哦！！设计。…</div>
+                    <div class="fullContent"> 厉害哦！！设计。</div>
+                    <div class="icon"></div>
+                </div>
+                <a class="map" href="http://j.map.baidu.com/GGVur" target="_blank" title="查看百度地图"><img width="401px"
+                                                                                                       height="454px"
+                                                                                                       src="picture/map.jpg"></a>
+
+                <div class="txtPanel">
+                    <div class="logo"><img src="picture/wslogo.png"></div>
+                    <div class="logoCnTxt">北京万博思图信息技术有限公司</div>
+                    <div class="logoEnTxt enFont">BeiJing Webstudio Interactive Design ltd.</div>
+                    <div class="address">北京市朝阳区光华路泰达时代中心4号楼704室</div>
+                    <div class="phone enFont">010－85990057　　010－85992077</div>
+                    <div class="hr enFont">13693660520( 王先生 )</div>
+                    <div class="fax enFont">010－59070059</div>
+                    <div class="zipCode enFont">100026</div>
+                    <div class="email enFont"><a href="mailto:webstudio@webstudio.com.cn">webstudio@webstudio.com.cn</a>
+                    </div>
+                    <div class="web enFont"><a href="http://www.cn-wbst.cn">http://www.cn-wbst.cn</a><br><a
+                            href="http://www.webstudio.com.cn">http://www.webstudio.com.cn</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="qqbox" id="divQQbox">
+    <div style="display: block" class="qqlv" id="meumid"><a href="tencent://message/?Menu=yes&uin=88469911"><img
+            src="picture/contact.jpg" alt="王先生" border="0"></a></div>
+</div>
+<div id="baidufenxiang">
+    <script type="text/javascript">var _bdhmProtocol = "https:" == document.location.protocol ? " https://" : " http://";
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe4d30ac9d534497ccbbb4de388c7efc5' type='text/javascript'%3E%3C/script%3E"))</script>
+</div>
+</body>
+</html>

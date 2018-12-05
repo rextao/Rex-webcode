@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>横向滚动及菜单特效</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .part1{background-color: aqua;}
+        .part2{background-color: #4e0700;}
+        .part3{background-color: #1e1422;}
+        .part4{background-color: #123412;}
+        .part5{background-color: #129992;}
+        .part6{background-color: #1aa412;}
+        .part7{background-color: #120012;}
+        #container, #container .part{position: relative;height: 200px;width: 1440px;float: left;overflow: hidden;}
+    </style>
+    <link rel="stylesheet" href="resources/nav.css" type="text/css">
+<body>
+    <div id="navContainer">
+        <div class="bg"></div>
+        <div class="logoIcon"></div>
+        <div class="content">
+            <div class="logo"><img src="resources/logo.png"></div>
+            <a class="nav navOut1 home btn_tween" href="#_home">首页</a>
+            <a class="nav navOut1 about btn_tween" href="#_about">关于我们</a>
+            <a class="nav navOut1 service btn_tween" href="#_service">服务客户</a>
+            <a class="nav navOut1 news btn_tween" href="#_news">新闻动态</a>
+            <a class="nav navOut1 recruit btn_tween" href="#_job">招贤纳士</a>
+            <a class="nav navOut1 contact btn_tween" href="#_contact">联系我们</a>
+            <a class="nav navOut2 cases btn_tween" href="case.php">案例作品</a>
+            <a class="nav navOut2 topic btn_tween" href="topic.php">数据可视化</a>
+            <a class="nav navOut2 platform btn_tween" href="platform.php">个性化管理平台</a>
+        </div>
+        <div class="phone"><strong>联系电话</strong><br>010-59070059<br>010-85990057</div>
+    </div>
+    <div id="container" style="width: 10080px;">
+        <div id="homeContainer" class="part part1" data-href="#_home"></div>
+        <div class="part part2" data-href="#_about"></div>
+        <div class="part part3" data-href="#_service"></div>
+        <div class="part part4" data-href="#_news"></div>
+        <div class="part part5" data-href="#_job"></div>
+        <div class="part part6" data-href="#_contact"></div>
+        <div class="part part7" data-href="#_other"></div>
+    </div>
+    <script src="lib/jquery-1.10.2.min.js"></script>
+    <script src="lib/jquery.mousewheel.js"></script>
+    <script src="lib/tweenlite.min.js"></script>
+    <script src="lib/cssplugin.min.js"></script>
+    <script src="js/wheel.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/tool.js"></script>
+    <script>
+        $(function(){
+            rx.wheel.init();
+            rx.nav.init();
+        })
+    </script>
+</body>
+</html>

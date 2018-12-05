@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8">
+    <title>test开关按钮</title>
+    <link href="btn.css" rel="stylesheet">
+</head>
+<body>
+<button  id="testBtn">get back</button>
+<div class=" btnOnOff" style="width:200px;">
+    <div class="setings-item">
+        <span class="itemTitle">人口热力图</span>
+        <div class="switch">
+            <div class="onoffswitch">
+                <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="showSyrkHeat">
+                <label class="onoffswitch-label" for="showSyrkHeat">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="mapzzLine"></div>
+    <div class="setings-item">
+        <span class="itemTitle">楼宇聚合图</span>
+        <div class="switch">
+            <div class="onoffswitch">
+                <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="showSyfwCluster">
+                <label class="onoffswitch-label" for="showSyfwCluster">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#showSyrkHeat").click(function() {
+                var flag = $("#showSyrkHeat").is(":checked") ? true: false;
+                if (flag === false) {
+                    alert("this is false")
+                    return;
+                }
+                alert("this is on")
+            });
+			$("#testBtn").click(function () {
+                $("#showSyrkHeat:checkbox").attr('checked',false);
+            });
+        })
+    </script>
+
+
+</body>

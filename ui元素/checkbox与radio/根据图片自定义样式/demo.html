@@ -1,0 +1,83 @@
+<html>
+<head>
+	<meta charset='utf-8'>
+	<script src="jquery-1.9.0.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".checkbox").click(function(){
+				var $obj = $(this).find('label');
+				if ($obj.hasClass("check")) {
+					$obj.removeClass("check");
+					return false;
+				}else{
+					$obj.addClass("check");
+					return false;
+				}
+			});
+			$('.radio').click(function(){
+				var all = $(this).parent().children().find('label');
+				var $obj = $(this).find('label');
+				if (!$obj.hasClass("check")) {
+					for(var i = 0 ; i< all.length ;i++){
+						$(all[i]).removeClass("check");
+					}
+					$obj.addClass("check");
+					return false;
+				}
+			});
+		});
+		
+	</script>
+	<style type="text/css">
+
+		.checkbox{cursor:pointer;}
+		.checkbox input {display:none;}
+		.checkbox label{display:inline-block;*display:inline;vertical-align:middle;margin:0;padding:0;width:22px;height:22px;background:url(green.png) no-repeat;border:none;cursor:pointer;}
+		.checkbox label:hover {background-position:-24px 0;}
+		.checkbox label.check {background-position:-48px 0;}
+
+		.radio {cursor:pointer;}
+		.radio input {display:none;}
+		.radio label{display:inline-block;*display:inline;vertical-align:middle;margin:0;padding:0;width:22px;height:22px;background:url(blue.png) no-repeat;border:none;cursor:pointer;    background-position: -120px 0;}
+		.radio label:hover {background-position: -144px 0;}
+		.radio label.check {background-position: -168px 0;}
+	</style>
+</head>
+<body>
+<h1>js写的可能比较复杂，通用性还是个问题</h1>
+		<div>
+			<div class="checkbox">
+				<input type="checkbox" id="checkbox_1">
+				<label for="checkbox_1"></label>
+				<span>asdfasd</span>
+			</div>
+			<div class="checkbox">
+				<input type="checkbox" id="checkbox_2">
+				<label for="checkbox_2"></label>
+				<span>asdfasd</span>
+			</div>
+		</div>
+
+		<div class="radio-group">
+			<div class="radio">
+				<input type="radio" id="radio1" name="demo1">
+				<label for="radio1"></label>
+				<span>asdfasd</span>
+			</div>
+			<div class="radio">
+				<input type="radio" id="radio2" name="demo1">
+				<label for="radio2"></label>
+				<span>asdfasd</span>
+			</div>
+			<div class="radio">
+				<input type="radio" id="radio3" name="demo1">
+				<label for="radio3"></label>
+				<span>asdfasd</span>
+			</div>
+		</div>
+
+
+
+
+</body>
+</html>
