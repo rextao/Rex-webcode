@@ -96,6 +96,21 @@
 <canvas id="canvas" class="modal" onclick="hideGuidance3()"></canvas>
 <h1>方法1</h1>
 <p>主要问题：clone.style.left等不能为clone赋值,<span style="color:red">注意要添加单位</span></p>
+<h1>方法2：利用box-shadow</h1>
+<div>
+    <p>优点: 实现方式简单易懂</p>
+    <p>缺点: box-shadow 是个比较耗性能的属性,会被类似于header或一些具有绝对元素定位影响</p>
+</div>
+<h1>方法3：利用 html2canvas </h1>
+<div>
+    <p>优点: 性能应该相对会比较好一点(如果html2canvas性能内有太差的话), 用 canvas 实现, 也比较不容易碰到各种层级遮挡或显示不全的问题. </p>
+    <p>缺点: 实现方式相对繁琐一点,而且需要借助外部工具</p>
+</div>
+<h1>方法4：把其他元素都设成半透明的.然后给 body 加一个黑色的底</h1>
+<p>需要获取大量dom并设置透明。。性能太差了。。</p>
+<h1>方法4：利用Intro.js</h1>
+<p><a href="https://github.com/usablica/intro.js" target="_blank">Intro.js</a></p>
+<p>17k star 20181206</p>
 </body>
 <script src="html2canvas.min.js"></script>
 <script>
@@ -107,7 +122,7 @@
     let target = document.querySelector('.mid-center');
     clone = target.cloneNode(true);
     let pos = target.getBoundingClientRect();
-    clone.style.position = 'fixed';
+    clone.style.position = 'absolute';
     clone.style.left = pos.left + 'px';
     clone.style.top = pos.top + 'px';
     clone.style.width = pos.width + 'px';
@@ -125,28 +140,28 @@
   }
 
   function showGuidance2() {
-    let target = document.querySelector('.mid-center')
-    target.style.boxShadow = '0 0 0 4000px rgba(0, 0, 0, 0.85)'
-    target.style.position = 'relative'
+    let target = document.querySelector('.mid-center');
+    target.style.boxShadow = '0 0 0 4000px rgba(0, 0, 0, 0.85)';
+    target.style.position = 'relative';
   }
 
   function hideGuidance2() {
-    let target = document.querySelector('.mid-center')
-    target.style.boxShadow = null
-    target.style.position = 'static'
+    let target = document.querySelector('.mid-center');
+    target.style.boxShadow = null;
+    target.style.position = 'static';
   }
 
   function showGuidance3() {
-    let target = document.querySelector('.mid-center')
-    let pos = target.getBoundingClientRect()
-    let w = ~~pos.width
-    let h = ~~pos.height
+    let target = document.querySelector('.mid-center');
+    let pos = target.getBoundingClientRect();
+    let w = ~~pos.width;// 类似于Math.floor()
+    let h = ~~pos.height;
 
-    let canvas = document.querySelector('#canvas')
-    canvas.width = document.documentElement.clientWidth
-    canvas.height = document.documentElement.clientHeight
+    let canvas = document.querySelector('#canvas');
+    canvas.width = document.documentElement.clientWidth;
+    canvas.height = document.documentElement.clientHeight;
     let ctx = canvas.getContext("2d");
-    canvas.style.display = 'block'
+    canvas.style.display = 'block';
 
     html2canvas(target, {
       width: w,
@@ -162,8 +177,8 @@
   }
 
   function showGuidance4() {
-    let main = document.querySelector('.main')
-    main.className += ' darkBackGround'
+    let main = document.querySelector('.main');
+    main.className += ' darkBackGround';
     setOpticity(main)
   }
   function hideGuidance4() {
@@ -191,9 +206,9 @@
 
   // 遍历 dom 上一步添加的样式名
   function unSetOpticity (element) {
-    let doms = Array.from(element.children) || []
+    let doms = Array.from(element.children) || [];
     for (let el of doms) {
-      el.className = el.className.replace(/ halfTransparent/i, '')
+      el.className = el.className.replace(/ halfTransparent/i, '');
       if (el.children.length) {
         unSetOpticity(el)
       }
