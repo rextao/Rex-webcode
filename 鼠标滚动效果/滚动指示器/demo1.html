@@ -2,32 +2,44 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>纯css实现</title>
+    <title>js实现</title>
     <style>
-        body {
-            background-image: linear-gradient(to right top, #FFCC00 50%, #EEEEEE 50%);
-            background-size: 100% calc(100% - 100vh + 6px);
-            background-repeat: no-repeat;
-        }
-        body::after {
-            content: "";
+        .scroll-line {
             position: fixed;
-            top: 5px;
             left: 0;
-            bottom: 0;
-            right: 0;
-            background: #FFFFFF;
-            z-index: -1;
+            top: 0;
+            height: 20px;
+            background-color: blue;
         }
     </style>
+    <script>
+        window.addEventListener('scroll',() => {
+          const body = document.body;
+          const html = document.documentElement;
+          const winHeight = window.innerHeight;
+          const docHeight = Math.max(
+            body.offsetHeight,
+            body.scrollHeight,
+            html.clientHeight,
+            html.offsetHeight,
+            html.scrollHeight
+          );
+          const scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+          const scrolled = (scrollTop / (docHeight-winHeight))*100;
+          const scrollLine = document.querySelector('.scroll-line');
+          scrollLine.style.width = scrolled + '%';
+        })
+    </script>
 </head>
 <body>
-<h1>如何获取高度</h1>
-<p>body的100%高是文档总高，100vh是视口高度</p>
-<h1>如何隐藏多余的背景色</h1>
-<p>利用body::after，以及z-index，content处于body的背景层之上</p>
-<h1>解决斜度问题</h1>
-<p style="color: red;">并不能解决边界并不垂直的问题</p>
+<div class="scroll-line" ></div>
+<div style="margin-top: 40px;">
+    <h1>js实现主要难点是计算滚动距离</h1>
+    <p style="color: red;">很好的解决了指示器最右边是斜的情况</p>
+    <p>滚动的距离为（文档的高度 - 可视窗口高度）*100%，用这个百分比设置水平指示器即可</p>
+    <p>计算示意图</p>
+    <img src="1.gif" alt="">
+</div>
 <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, suscipit?</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dignissimos doloribus eveniet expedita explicabo
     facilis, ipsam iusto magni maxime, minima nisi odit pariatur quam quasi reiciendis repellat sunt vero voluptas!</p>
